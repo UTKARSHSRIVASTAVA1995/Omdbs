@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+
+        <EditText
+            android:id="@+id/textInputLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:background="#FFFFFF"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/textInputEditTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:hint="Password"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/appCompatButtonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22dp"
+            android:background="#51d8c7"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/textViewLinkRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center_horizontal"
+            android:text="No Account yet? Create one"
+            android:textColor="#FFFFFF"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
