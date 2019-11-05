@@ -5,10 +5,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -30,9 +28,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private User user;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getSupportActionBar().hide();
         initViews();
         initListeners();
         initObjects();
@@ -60,6 +59,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
         appCompatButtonRegister = findViewById(R.id.appCompatButtonRegister);
         appCompatTextViewLoginLink = findViewById(R.id.appCompatTextViewLoginLink);
+
     }
 
     @Override
@@ -67,6 +67,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
 
             case R.id.appCompatButtonRegister:
+                Toast.makeText(RegisterActivity.this, "Registration Successfull", Toast.LENGTH_LONG).show();
                 postDataToSQLite();
                 break;
 
@@ -77,6 +78,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void postDataToSQLite() {
+
         if (!inputValidation.isInputEditTextFilled(textInputEditTextName, textInputLayoutName, getString(R.string.error_message_name))) {
             return;
         }
@@ -89,13 +91,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return;
         }
+
         if (!databaseHelper.chechkUser(textInputEditTextEmail.getText().toString().trim())) {
 
             user.setName(textInputEditTextName.getText().toString().trim());
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
-
             databaseHelper.addUser(user);
+
+
 
         } else {
         }

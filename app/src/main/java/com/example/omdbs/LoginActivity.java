@@ -1,30 +1,29 @@
-package com.example.omdbs;
-
+/**package com.example.omdbs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.omdbs.DatabaseHelper;
+import com.example.omdbs.InputValidation;
+import com.example.omdbs.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final AppCompatActivity activity = LoginActivity.this;
+
+
+private final AppCompatActivity activity = LoginActivity.this;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
-
     private TextInputEditText textInputEditTextEmail;
     private TextInputEditText textInputEditTextPassword;
-
     private Button appCompatButtonLogin;
-
     private TextView textViewLinkRegister;
-
     private InputValidation inputValidation;
     private DatabaseHelper databaseHelper;
 
@@ -37,12 +36,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         initViews();
         initListeners();
         initObjects();
+
     }
 
     private void initObjects() {
         inputValidation = new InputValidation(activity);
         databaseHelper = new DatabaseHelper(activity);
-
 
     }
 
@@ -55,12 +54,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void initViews() {
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
-
         textInputEditTextEmail = findViewById(R.id.textInputEditTextEmail);
         textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
-
         appCompatButtonLogin = findViewById(R.id.appCompatButtonLogin);
-
         textViewLinkRegister = findViewById(R.id.textViewLinkRegister);
 
 
@@ -112,3 +108,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 }
 
+*/

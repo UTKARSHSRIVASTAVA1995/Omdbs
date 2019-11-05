@@ -67,6 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<User> userList = new ArrayList<User>();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USER,
+
                 columns,
                 null,
                 null,
@@ -99,7 +100,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(user.getId())});
         db.close();
     }
-
     public void deleteUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",

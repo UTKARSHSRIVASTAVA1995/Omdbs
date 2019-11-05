@@ -1,5 +1,4 @@
 package com.example.omdbs;
-
 import android.app.Activity;
 import android.content.Context;
 import android.view.View;
@@ -15,7 +14,9 @@ public class InputValidation {
 
 
     public InputValidation(Context context) {
+
         this.context = context;
+
     }
 
     public boolean isInputEditTextFilled(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String message) {
