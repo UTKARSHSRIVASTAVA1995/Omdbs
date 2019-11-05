@@ -1,22 +1,31 @@
 package com.example.omdbs;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
-    private EditText textInputLayoutEmail;
-    private EditText textInputEditTextPassword;
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+    private final AppCompatActivity activity = LoginActivity.this;
+
+    private TextInputLayout textInputLayoutEmail;
+    private TextInputLayout textInputLayoutPassword;
+
+    private TextInputEditText textInputEditTextEmail;
+    private TextInputEditText textInputEditTextPassword;
+
     private Button appCompatButtonLogin;
+
     private TextView textViewLinkRegister;
+
+    private InputValidation inputValidation;
     private DatabaseHelper databaseHelper;
 
     @Override
@@ -45,9 +54,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void initViews() {
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
-        textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
-        appCompatButtonLogin = findViewById(R.id.appCompatButtonLogin);
-        textViewLinkRegister = findViewById(R.id.textViewLinkRegister);
+        textInputLayoutPassword =  findViewById(R.id.textInputLayoutPassword);
+
+        textInputEditTextEmail =  findViewById(R.id.textInputEditTextEmail);
+        textInputEditTextPassword =  findViewById(R.id.textInputEditTextPassword);
+
+        appCompatButtonLogin =  findViewById(R.id.appCompatButtonLogin);
+
+        textViewLinkRegister  =  findViewById(R.id.textViewLinkRegister);
+
 
     }
 
@@ -63,15 +78,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
-    private void verifyFromSQLite()
-    {
-     if (!inputValidation.isInputEditTextFilled(textInputLayoutEmail,getString(R.string.error_message_email)){
-         return;
+
+    private void verifyFromSQLite() {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+            return;
         }
         if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
-
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_email))) {
             return;
         }
@@ -85,8 +99,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             emptyInputEditText();
             startActivity(accountsIntent);
 
+
         } else {
-            Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
+
+
         }
     }
 
@@ -95,3 +111,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textInputEditTextPassword.setText(null);
     }
 }
+
