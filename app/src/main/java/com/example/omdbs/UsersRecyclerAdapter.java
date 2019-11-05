@@ -40,7 +40,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         return listUsers.size();
     }
 
-
     public class UserViewHolder extends RecyclerView.ViewHolder {
 
         public AppCompatTextView textViewName;
