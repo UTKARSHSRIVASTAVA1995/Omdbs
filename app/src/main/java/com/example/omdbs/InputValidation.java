@@ -13,6 +13,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class InputValidation {
     private Context context;
 
+
     public InputValidation(Context context) {
         this.context = context;
     }
@@ -53,14 +54,13 @@ public class InputValidation {
             textInputLayout.setErrorEnabled(false);
         }
         return true;
-    }
 
+    }
 
     private void hideKeyboardFrom(View view) {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
-
 }
 
 

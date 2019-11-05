@@ -13,8 +13,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private final AppCompatActivity activity = LoginActivity.this;
 
+    private final AppCompatActivity activity = LoginActivity.this;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
 
@@ -54,14 +54,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void initViews() {
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
-        textInputLayoutPassword =  findViewById(R.id.textInputLayoutPassword);
+        textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
 
-        textInputEditTextEmail =  findViewById(R.id.textInputEditTextEmail);
-        textInputEditTextPassword =  findViewById(R.id.textInputEditTextPassword);
+        textInputEditTextEmail = findViewById(R.id.textInputEditTextEmail);
+        textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
 
-        appCompatButtonLogin =  findViewById(R.id.appCompatButtonLogin);
+        appCompatButtonLogin = findViewById(R.id.appCompatButtonLogin);
 
-        textViewLinkRegister  =  findViewById(R.id.textViewLinkRegister);
+        textViewLinkRegister = findViewById(R.id.textViewLinkRegister);
 
 
     }
@@ -80,6 +80,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void verifyFromSQLite() {
+
         if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
@@ -101,7 +102,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
         } else {
-
 
         }
     }

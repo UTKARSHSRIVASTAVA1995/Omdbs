@@ -26,8 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private String DROP_USER_TABLE = "DROP TABLE IF EXISTS " + TABLE_USER;
 
 
-    public DatabaseHelper(Context context)
-    {
+    public DatabaseHelper(Context context) {
 
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
 
@@ -89,7 +88,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return userList;
 
     }
-    public void updateUser(User user){
+
+    public void updateUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_USER_NAME, user.getName());
@@ -99,12 +99,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(user.getId())});
         db.close();
     }
-    public void deleteUser(User user){
+
+    public void deleteUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",
                 new String[]{String.valueOf(user.getId())});
         db.close();
     }
+
     public boolean chechkUser(String email) {
         String[] columns = {
                 COLUMN_USER_ID
@@ -128,6 +130,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return false;
     }
+
     public boolean checkUser(String email, String password) {
 
         String[] columns = {
