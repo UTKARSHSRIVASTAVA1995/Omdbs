@@ -17,11 +17,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private TextInputLayout textInputLayoutName;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
-    private TextInputLayout textInputLayoutVerifyEmail;
     private TextInputEditText textInputEditTextName;
     private TextInputEditText textInputEditTextEmail;
     private TextInputEditText textInputEditTextPassword;
-    private TextInputEditText textInputEditTextVerifyEmail;
     private Button appCompatButtonRegister;
     private TextView appCompatTextViewLoginLink;
     private InputValidation inputValidation;
@@ -54,7 +52,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         textInputLayoutName = findViewById(R.id.textInputLayoutName);
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
-        textInputLayoutVerifyEmail=findViewById(R.id.textInputEditTextVerifyEmail);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
         textInputEditTextName = findViewById(R.id.textInputEditTextName);
         textInputEditTextEmail = findViewById(R.id.textInputEditTextEmail);
@@ -92,8 +89,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
-        if (!inputValidation.isInputEditTextEmail(textInputEditTextVerifyEmail, textInputLayoutVerifyEmail, getString(R.string.error_message_verifyemail))){
-        }
 
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return;
@@ -102,7 +97,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!databaseHelper.chechkUser(textInputEditTextEmail.getText().toString().trim())) {
             user.setName(textInputEditTextName.getText().toString().trim());
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
-            user.setEmail(textInputEditTextVerifyEmail.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
             databaseHelper.addUser(user);
         }

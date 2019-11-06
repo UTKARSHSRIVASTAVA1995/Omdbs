@@ -1,4 +1,5 @@
 package com.example.omdbs;
+
 import android.app.Activity;
 import android.content.Context;
 import android.view.View;
@@ -41,6 +42,7 @@ public class InputValidation {
         } else {
             textInputLayout.setErrorEnabled(false);
         }
+
         return true;
     }
 

@@ -96,7 +96,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",
                 new String[]{String.valueOf(user.getId())});
-      db.close();
+        db.close();
     }
 
     public boolean chechkUser(String email) {

@@ -2,9 +2,9 @@ package com.example.omdbs;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +16,7 @@ public class UsersListActivity extends AppCompatActivity {
 
 
     private AppCompatActivity activity = UsersListActivity.this;
-    private AppCompatTextView textViewName;
+    private TextView textViewName;
     private RecyclerView recyclerViewUsers;
     private List<User> listUsers;
     private UsersRecyclerAdapter usersRecyclerAdapter;
@@ -45,6 +45,7 @@ public class UsersListActivity extends AppCompatActivity {
 
         listUsers = new ArrayList<>();
         usersRecyclerAdapter = new UsersRecyclerAdapter(listUsers);
+
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewUsers.setLayoutManager(mLayoutManager);
         recyclerViewUsers.setItemAnimator(new DefaultItemAnimator());
@@ -54,7 +55,6 @@ public class UsersListActivity extends AppCompatActivity {
 
         String emailFromIntent = getIntent().getStringExtra("EMAIL");
         textViewName.setText(emailFromIntent);
-
         getDataFromSQLite();
 
     }
