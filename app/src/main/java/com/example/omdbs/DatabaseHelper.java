@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "UserManager.db";
     private static final String TABLE_USER = "user";
@@ -56,25 +57,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<User> getAllUser() {
-        String[] columns = {
-                COLUMN_USER_ID,
-                COLUMN_USER_EMAIL,
-                COLUMN_USER_NAME,
-                COLUMN_USER_PASSWORD
-        };
-        String sortOrder =
-                COLUMN_USER_NAME + " ASC";
+        String[] columns = {COLUMN_USER_ID, COLUMN_USER_EMAIL, COLUMN_USER_NAME, COLUMN_USER_PASSWORD,};
+        String sortOrder = COLUMN_USER_NAME + " ASC";
         ArrayList<User> userList = new ArrayList<User>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_USER,
+        Cursor cursor = db.query(TABLE_USER, columns, null, null, null, null, sortOrder);
 
-                columns,
-                null,
-                null,
-                null,
-                null,
-                sortOrder);
         if (cursor.moveToFirst()) {
+
             do {
                 User user = new User();
                 user.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ID))));
@@ -84,6 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 userList.add(user);
             } while (cursor.moveToNext());
         }
+
         cursor.close();
         db.close();
         return userList;
@@ -100,28 +91,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(user.getId())});
         db.close();
     }
+
     public void deleteUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",
                 new String[]{String.valueOf(user.getId())});
-        db.close();
+      db.close();
     }
 
     public boolean chechkUser(String email) {
-        String[] columns = {
-                COLUMN_USER_ID
-        };
+        String[] columns = {COLUMN_USER_ID};
         SQLiteDatabase db = this.getReadableDatabase();
         String selection = COLUMN_USER_EMAIL + " = ?";
         String[] selectionArgs = {email};
 
-        Cursor cursor = db.query(TABLE_USER,
-                columns,
-                selection,
-                selectionArgs,
-                null,
-                null,
-                null);
+        Cursor cursor = db.query(TABLE_USER, columns, selection, selectionArgs, null, null, null);
         int cursorCount = cursor.getCount();
         cursor.close();
         db.close();
@@ -133,9 +117,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public boolean checkUser(String email, String password) {
 
-        String[] columns = {
-                COLUMN_USER_ID
-        };
+        String[] columns = {COLUMN_USER_ID};
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selection = COLUMN_USER_EMAIL + " = ?" + " AND " + COLUMN_USER_PASSWORD + " = ?";
@@ -143,13 +125,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String[] selectionArgs = {email, password};
 
-        Cursor cursor = db.query(TABLE_USER,
-                columns,
-                selection,
-                selectionArgs,
-                null,
-                null,
-                null);
+        Cursor cursor = db.query(TABLE_USER, columns, selection, selectionArgs, null, null, null);
         int cursorCount = cursor.getCount();
         cursor.close();
         db.close();

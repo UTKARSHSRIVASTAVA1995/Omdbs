@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsersListActivity extends AppCompatActivity {
+
+
     private AppCompatActivity activity = UsersListActivity.this;
     private AppCompatTextView textViewName;
     private RecyclerView recyclerViewUsers;
@@ -22,6 +24,7 @@ public class UsersListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_list);
         getSupportActionBar().setTitle("");
@@ -30,17 +33,18 @@ public class UsersListActivity extends AppCompatActivity {
 
     }
 
-
     private void initViews() {
+
         textViewName = findViewById(R.id.textViewName);
         recyclerViewUsers = findViewById(R.id.recyclerViewUsers);
+
     }
 
 
     private void initObjects() {
+
         listUsers = new ArrayList<>();
         usersRecyclerAdapter = new UsersRecyclerAdapter(listUsers);
-
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewUsers.setLayoutManager(mLayoutManager);
         recyclerViewUsers.setItemAnimator(new DefaultItemAnimator());
@@ -52,13 +56,16 @@ public class UsersListActivity extends AppCompatActivity {
         textViewName.setText(emailFromIntent);
 
         getDataFromSQLite();
+
     }
 
     private void getDataFromSQLite() {
 
         new AsyncTask<Void, Void, Void>() {
+
             @Override
-            protected Void doInBackground(Void... params) {
+
+            protected Void  doInBackground(Void... params) {
                 listUsers.clear();
                 listUsers.addAll(databaseHelper.getAllUser());
 
@@ -66,10 +73,12 @@ public class UsersListActivity extends AppCompatActivity {
             }
 
             @Override
+
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                 usersRecyclerAdapter.notifyDataSetChanged();
             }
-        }.execute();
+        }
+        .execute();
     }
 }

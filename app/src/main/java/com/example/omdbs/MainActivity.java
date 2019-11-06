@@ -57,12 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
         appCompatButtonLogin = findViewById(R.id.appCompatButtonLogin);
         textViewLinkRegister = findViewById(R.id.textViewLinkRegister);
-
-
     }
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()) {
             case R.id.appCompatButtonLogin:
                 verifyFromSQLite();

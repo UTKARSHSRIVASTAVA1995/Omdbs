@@ -25,6 +25,7 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
                 .inflate(R.layout.item_user_recycler, parent, false);
 
         return new UserViewHolder(itemView);
+
     }
 
     @Override
@@ -47,7 +48,9 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         public AppCompatTextView textViewPassword;
 
         public UserViewHolder(View view) {
+
             super(view);
+
             textViewName = view.findViewById(R.id.textViewName);
             textViewEmail = view.findViewById(R.id.textViewEmail);
             textViewPassword = view.findViewById(R.id.textViewPassword);
