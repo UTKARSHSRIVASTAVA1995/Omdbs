@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="4"
-        android:background="#413e4f"
+        android:background="#413e4F"
         android:orientation="vertical">
 
     </RelativeLayout>
@@ -59,10 +59,9 @@
 
                 android:id="@+id/textInputEditTextPassword"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="43dp"
                 android:layout_gravity="center_horizontal"
                 android:hint="Password"
-
                 android:inputType="textPassword"
                 android:maxLines="1" />
 

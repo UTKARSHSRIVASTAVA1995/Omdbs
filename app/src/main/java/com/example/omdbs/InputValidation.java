@@ -42,7 +42,6 @@ public class InputValidation {
         } else {
             textInputLayout.setErrorEnabled(false);
         }
-
         return true;
     }
 
@@ -57,7 +56,6 @@ public class InputValidation {
             textInputLayout.setErrorEnabled(false);
         }
         return true;
-
     }
 
     private void hideKeyboardFrom(View view) {

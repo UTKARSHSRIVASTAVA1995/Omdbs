@@ -65,7 +65,7 @@ public class UsersListActivity extends AppCompatActivity {
 
             @Override
 
-            protected Void  doInBackground(Void... params) {
+            protected Void doInBackground(Void... params) {
                 listUsers.clear();
                 listUsers.addAll(databaseHelper.getAllUser());
 
@@ -79,6 +79,6 @@ public class UsersListActivity extends AppCompatActivity {
                 usersRecyclerAdapter.notifyDataSetChanged();
             }
         }
-        .execute();
+                .execute();
     }
 }

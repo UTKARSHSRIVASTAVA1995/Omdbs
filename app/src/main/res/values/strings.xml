@@ -2,12 +2,14 @@
     <string name="app_name">Omdbs</string>
     <string name="text_accounts">All Accounts</string>
     <string name="hint_name">Name</string>
+    <string name="credit_card">Credit Card</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="text_login">Login</string>
     <string name="text_register">Register</string>
     <string name="error_message_name">Enter Full Name</string>
+    <string name="error_message_credit_card">Enter 16 digit Credit Card Number </string>
     <string name="error_message_email">Enter Valid Email</string>
     <string name="error_message_verifyemail">Enter Same Value as Above</string>
     <string name="error_message_age">Enter Age</string>
@@ -16,7 +18,7 @@
     <string name="text_not_member">No account yet? Create one</string>
     <string name="text_already_member">Already a member? Login</string>
     <string name="error_email_exists">Email Already Exists</string>
-    <string name="error_password_match">Password Does Not Matches</string>
+    <string name="error_email_match">Enter same value as above</string>
     <string name="error_valid_email_password">Wrong Email or Password</string>
     <string name="action_settings">Settings</string>
 </resources>

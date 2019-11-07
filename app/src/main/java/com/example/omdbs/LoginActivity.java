@@ -1,23 +1,20 @@
-/**package com.example.omdbs;
+package com.example.omdbs;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.omdbs.DatabaseHelper;
-import com.example.omdbs.InputValidation;
-import com.example.omdbs.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-
-private final AppCompatActivity activity = LoginActivity.this;
+    private final AppCompatActivity activity = LoginActivity.this;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
     private TextInputEditText textInputEditTextEmail;
@@ -28,7 +25,7 @@ private final AppCompatActivity activity = LoginActivity.this;
     private DatabaseHelper databaseHelper;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
@@ -87,15 +84,12 @@ private final AppCompatActivity activity = LoginActivity.this;
             return;
         }
 
-        if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
-                , textInputEditTextPassword.getText().toString().trim())) {
-
+        if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
 
             Intent accountsIntent = new Intent(activity, UsersListActivity.class);
             accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
-
 
         } else {
 
@@ -108,4 +102,3 @@ private final AppCompatActivity activity = LoginActivity.this;
     }
 }
 
-*/
