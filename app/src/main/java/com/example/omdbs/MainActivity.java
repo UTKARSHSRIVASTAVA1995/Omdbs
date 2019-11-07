@@ -11,7 +11,6 @@ public class MainActivity extends Activity {
 
     private final int SPLASH_DISPLAY_LENGTH = 2000;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
