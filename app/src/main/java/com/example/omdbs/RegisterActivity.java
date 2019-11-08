@@ -1,7 +1,6 @@
 package com.example.omdbs;
 
 import android.os.Bundle;
-import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -98,6 +97,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (!inputValidation.isInputEditTextFilled(textInputEditTextCreditCard, textInputLayoutCreditCard, getString(R.string.error_message_credit_card))) {
+            String value = textInputEditTextCreditCard.getText().toString().trim();
+            Integer.parseInt(value);
             return;
         }
 
@@ -120,16 +121,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setName(textInputEditTextName.getText().toString().trim());
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
-            databaseHelper.addUser(user);
-        } else {
-        }
-        if (!databaseHelper.checkUser1(textInputEditTextCreditCard.getText().toString().trim())) {
             user.setCreditCard(textInputEditTextCreditCard.getText().toString().trim());
-            String value = textInputEditTextCreditCard.getText().toString().trim();
-            Integer.parseInt(value);
             databaseHelper.addUser(user);
         } else {
-
         }
     }
 }
