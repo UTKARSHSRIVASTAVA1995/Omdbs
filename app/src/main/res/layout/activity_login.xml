@@ -10,8 +10,8 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="4"
-        android:background="#413e4F"
+        android:layout_weight="3"
+        android:background="#141416"
         android:orientation="vertical">
 
     </RelativeLayout>
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.4"
-        android:background="#413e4f"
+        android:background="#18181A"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
