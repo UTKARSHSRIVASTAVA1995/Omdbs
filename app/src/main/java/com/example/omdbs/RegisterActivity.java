@@ -1,6 +1,7 @@
 package com.example.omdbs;
 
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private DatabaseHelper databaseHelper;
     private User user;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         initViews();
         initListeners();
         initObjects();
-
     }
 
     private void initObjects() {
@@ -81,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
 
             case R.id.appCompatButtonRegister:
-                Toast.makeText(RegisterActivity.this, "Registration Successfull", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, "Registration SuccessFull", Toast.LENGTH_LONG).show();
                 postDataToSQLite();
                 break;
             case R.id.appCompatTextViewLoginLink:
@@ -121,7 +122,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
             databaseHelper.addUser(user);
         } else {
-
         }
         if (!databaseHelper.checkUser1(textInputEditTextCreditCard.getText().toString().trim())) {
             user.setCreditCard(textInputEditTextCreditCard.getText().toString().trim());
@@ -129,7 +129,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             Integer.parseInt(value);
             databaseHelper.addUser(user);
         } else {
+
         }
     }
 }
-

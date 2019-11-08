@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
+
         <com.google.android.material.textfield.TextInputEditText
 
             android:id="@+id/textInputEditTextCreditCard"
@@ -40,7 +41,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:hint="Credit Card"
-            android:inputType="number" />
+            android:maxLength="16"
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
