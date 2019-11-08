@@ -29,7 +29,6 @@ public class InputValidation {
         } else {
             textInputLayout.setErrorEnabled(false);
         }
-
         return true;
     }
 

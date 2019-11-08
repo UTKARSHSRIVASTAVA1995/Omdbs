@@ -73,7 +73,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         appCompatButtonRegister = findViewById(R.id.appCompatButtonRegister);
         appCompatTextViewLoginLink = findViewById(R.id.appCompatTextViewLoginLink);
 
-
     }
 
     @Override
@@ -85,7 +84,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(RegisterActivity.this, "Registration Successfull", Toast.LENGTH_LONG).show();
                 postDataToSQLite();
                 break;
-
             case R.id.appCompatTextViewLoginLink:
                 finish();
                 break;
@@ -93,6 +91,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void postDataToSQLite() {
+
         if (!inputValidation.isInputEditTextFilled(textInputEditTextName, textInputLayoutName, getString(R.string.error_message_name))) {
             return;
         }
@@ -116,21 +115,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if (!databaseHelper.chechkUser(textInputEditTextEmail.getText().toString().trim())) {
+        if (!databaseHelper.checkUsers(textInputEditTextEmail.getText().toString().trim())) {
             user.setName(textInputEditTextName.getText().toString().trim());
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
             databaseHelper.addUser(user);
-
         } else {
 
-            if (databaseHelper.chechkUser(textInputEditTextCreditCard.getText().toString().trim()))
-                ;
+        }
+        if (!databaseHelper.checkUser1(textInputEditTextCreditCard.getText().toString().trim())) {
+            user.setCreditCard(textInputEditTextCreditCard.getText().toString().trim());
             String value = textInputEditTextCreditCard.getText().toString().trim();
             Integer.parseInt(value);
             databaseHelper.addUser(user);
-
-
+        } else {
         }
     }
 }
