@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#040405">
+    android:background="#E97171">
 
 
-    <ImageView
-        android:id="@+id/landing_screen"
-        android:layout_width="match_parent"
-        android:layout_height="255dp"
-        android:gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="OMDB"
+        android:textSize="80dp"
+        android:textColor="#FDFCFC"
+        android:textStyle="italic"
+        android:paddingTop="170dp"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Media Database"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:textColor="#FDFCFC"
+        android:textStyle="italic"/>
+
+</RelativeLayout>

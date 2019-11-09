@@ -11,8 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:background="#474545"
+        android:background="#E97171"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="OMDB"
+            android:textSize="70dp"
+            android:textColor="#FDFDFD"
+            android:textStyle="italic"/>
 
     </RelativeLayout>
 
@@ -21,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.4"
-        android:background="#474545"
+        android:background="#E97171"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -31,7 +40,8 @@
             android:layout_height="wrap_content"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColorHint="#FFFFFF">
+            android:textColorHint="#FFFFFF"
+            android:background="@drawable/email_edittext">
 
             <com.google.android.material.textfield.TextInputEditText
 
@@ -41,7 +51,7 @@
                 android:layout_gravity="center_horizontal"
                 android:hint="Email"
                 android:inputType="text"
-                android:maxLines="1" />
+                android:maxLines="1"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,7 +63,8 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColorHint="#FFFFFF"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            android:background="@drawable/pass_edittext">
 
             <com.google.android.material.textfield.TextInputEditText
 
@@ -71,11 +82,11 @@
         <Button
 
             android:id="@+id/appCompatButtonLogin"
-            android:layout_width="367dp"
-            android:layout_height="wrap_content"
+            android:layout_width="329dp"
+            android:layout_height="37dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_button"
             android:text="Login" />
 
         <TextView
