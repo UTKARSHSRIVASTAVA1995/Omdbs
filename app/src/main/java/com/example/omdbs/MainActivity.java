@@ -239,7 +239,8 @@ public class MainActivity extends Activity {
             for (int i = 0; i < movies.size(); i++) {
                 if (movies.get(i) == null) {
                     movies.remove(i);
-                    gridFragment.gridRecyclerAdapter.notifyItemRemoved(i);
+                    gridFragment.gridRecyclerAdapter.notifyItemRemoved(i)
+                    ;
                 }
             }
             gridFragment.gridRecyclerAdapter.notifyDataSetChanged();
