@@ -38,12 +38,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initObjects() {
+
         inputValidation = new InputValidation(activity);
         databaseHelper = new DatabaseHelper(activity);
 
     }
 
     private void initListeners() {
+
         appCompatButtonLogin.setOnClickListener(this);
         textViewLinkRegister.setOnClickListener(this);
 
@@ -95,7 +97,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(accountsIntent);
 
         } else {
-
         }
     }
 

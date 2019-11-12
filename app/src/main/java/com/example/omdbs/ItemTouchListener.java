@@ -43,8 +43,7 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
 
     @Override
     public void onTouchEvent(RecyclerView recyclerView, MotionEvent event) {
-        // We can silently track tap and and long presses by silently
-        // intercepting touch events in the host RecyclerView.
+
     }
 
     public abstract boolean onClick(RecyclerView parent, View view, int position, long id);
@@ -81,10 +80,7 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
         }
 
         public void dispatchSingleTapUpIfNeeded(MotionEvent event) {
-            // When the long press hook is called but the long press listener
-            // returns false, the target child will be left around to be
-            // handled later. In this case, we should still treat the gesture
-            // as potential item click.
+
             if (mTargetChild != null) {
                 onSingleTapUp(event);
             }
