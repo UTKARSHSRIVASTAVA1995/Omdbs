@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 
 public interface ApiCall {
     String BASE_URL = "http://www.omdbapi.com/?";
-    // String BASE_URL = "http://www.omdbapi.com";
+
 
     @GET("/")
     Call<MovieSearchList> search(@Query("apikey") String apikey, @Query("t") String query, @Query("type") String type, @Query("page") int page);
@@ -26,9 +26,6 @@ public interface ApiCall {
 
         public static ApiCall getInstance() {
             if (service == null) {
-//                Gson gson = new GsonBuilder()
-//                        .setLenient()
-//                        .create();
 
                 Retrofit retrofit = new Retrofit.Builder()
                         .addConverterFactory(GsonConverterFactory.create())

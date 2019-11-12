@@ -14,6 +14,7 @@
     <string name="error_message_verifyemail">Enter Same Value as Above</string>
     <string name="error_message_age">Enter Age</string>
     <string name="error_message_password">Enter Password</string>
+    <string name="error_message_password1">Enter Valid Password</string>
     <string name="success_message">Registration Successful</string>
     <string name="text_not_member">No account yet? Create one</string>
     <string name="text_already_member">Already a member? Login</string>

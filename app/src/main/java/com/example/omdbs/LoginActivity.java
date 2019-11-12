@@ -1,5 +1,6 @@
 package com.example.omdbs;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -65,6 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.appCompatButtonLogin:
                 verifyFromSQLite();
+
                 break;
             case R.id.textViewLinkRegister:
                 Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
