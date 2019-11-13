@@ -6,6 +6,7 @@
     android:padding="16dp">
 
     <ImageView
+
         android:id="@+id/sheet_poster"
         android:layout_width="120dp"
         android:layout_height="160dp"
@@ -13,6 +14,7 @@
         android:layout_alignParentTop="true" />
 
     <TextView
+
         android:id="@+id/sheet_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +27,7 @@
         android:textSize="20sp" />
 
     <TextView
+
         android:id="@+id/sheet_release"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,6 +40,7 @@
         android:textSize="14sp" />
 
     <TextView
+
         android:id="@+id/sheet_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +53,7 @@
         android:textSize="14sp" />
 
     <TextView
+
         android:id="@+id/sheet_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
