@@ -16,6 +16,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     private final AppCompatActivity activity = LoginActivity.this;
+
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
     private TextInputEditText textInputEditTextEmail;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+
 
         initViews();
         initListeners();
@@ -66,10 +67,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.appCompatButtonLogin:
                 verifyFromSQLite();
-
                 break;
+
             case R.id.textViewLinkRegister:
                 Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intentRegister);
@@ -85,15 +87,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
-        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password1))) {
             return;
         }
-
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password1))) {
+            return;
+        }
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
 
-            Intent accountsIntent = new Intent(activity, UsersListActivity.class);
-            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
-            emptyInputEditText();
+
+            Intent accountsIntent = new Intent(activity, Start_Activity.class);
+            //accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
+            //emptyInputEditText();
             startActivity(accountsIntent);
 
         } else {

@@ -42,7 +42,7 @@ public class GridRecyclerFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        movies = startActivity.movies;
+        movies = Start_Activity.movies;
     }
 
     @Override

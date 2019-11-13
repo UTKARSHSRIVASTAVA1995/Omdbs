@@ -27,7 +27,6 @@ public class UsersListActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_list);
-        getSupportActionBar().setTitle("");
         initViews();
         initObjects();
 

@@ -24,7 +24,7 @@
     <activity android:name=".RegisterActivity" />
         <activity android:name=".UsersListActivity"/>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".startActivity"/>
+        <activity android:name=".Start_Activity"/>
     </application>
 
 

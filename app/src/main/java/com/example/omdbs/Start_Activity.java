@@ -32,7 +32,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class startActivity extends AppCompatActivity {
+public class Start_Activity extends AppCompatActivity {
 
 
     public static ArrayList<MovieSearchList.Search> movies;
@@ -90,7 +90,7 @@ public class startActivity extends AppCompatActivity {
         SearchView.OnQueryTextListener queryTextListener = new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                startActivity.this.latestQuery = query;
+                Start_Activity.this.latestQuery = query;
                 getData(query, true);
                 if (progressDialog != null && !progressDialog.isShowing()) {
                     progressDialog.show();
