@@ -93,8 +93,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password1))) {
             return;
         }
-        if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
 
+        if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
 
             Intent accountsIntent = new Intent(activity, Start_Activity.class);
             //accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
@@ -104,10 +104,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } else {
         }
     }
-
-    private void emptyInputEditText() {
-        textInputEditTextEmail.setText(null);
-        textInputEditTextPassword.setText(null);
-    }
 }
 
+ //   private void emptyInputEditText() {
+   //     textInputEditTextEmail.setText(null);
+     //   textInputEditTextPassword.setText(null);
+    //}
+//}

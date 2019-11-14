@@ -23,6 +23,7 @@ public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private ArrayList<MovieSearchList.Search> movies;
 
     public GridRecyclerAdapter(Context context, ArrayList<MovieSearchList.Search> movies) {
+
         this.context = context;
         this.movies = movies;
     }
@@ -46,6 +47,7 @@ public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
         if (holder instanceof MovieViewHolder) {
             MovieSearchList.Search movie = movies.get(position);
             MovieViewHolder movieViewHolder = (MovieViewHolder) holder;
@@ -70,9 +72,9 @@ public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         public MovieViewHolder(View itemView) {
             super(itemView);
-            poster = (ImageView) itemView.findViewById(R.id.poster);
-            title = (TextView) itemView.findViewById(R.id.title);
-            description = (TextView) itemView.findViewById(R.id.description);
+            poster = itemView.findViewById(R.id.poster);
+            title = itemView.findViewById(R.id.title);
+            description = itemView.findViewById(R.id.description);
         }
     }
 
@@ -81,7 +83,7 @@ public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         public LoadingViewHolder(View itemView) {
             super(itemView);
-            progressBar = (ProgressBar) itemView.findViewById(R.id.progress_bar);
+            progressBar = itemView.findViewById(R.id.progress_bar);
         }
     }
 }

@@ -18,8 +18,9 @@ public interface ApiCall {
     @GET("/")
     Call<MovieSearchList> searchMovie(@Query("apikey") String apikey, @Query("s") String query, @Query("page") String page);
 
+
     @GET("/")
-    Call<MovieModel> getMovie(@Query("i") String imdbId);
+    Call<MovieModel> getMovie(@Query("i") String omdbId);
 
     class Factory {
         public static ApiCall service;

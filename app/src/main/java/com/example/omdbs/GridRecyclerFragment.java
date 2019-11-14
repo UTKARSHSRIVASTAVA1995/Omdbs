@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -20,11 +20,14 @@ import java.util.ArrayList;
 
 public class GridRecyclerFragment extends Fragment {
 
-    public RecyclerView movieGridRecycler;
+    public RecyclerView movieGridRecycler1;
+    public RecyclerView movieGridRecycler2;
+    public RecyclerView movieGridRecycler3;
+
     public GridRecyclerAdapter gridRecyclerAdapter;
     public TextView message;
     private ArrayList<MovieSearchList.Search> movies;
-    private GridLayoutManager gridLayoutManager;
+
     private OnLoadMoreListener mOnLoadMoreListener;
 
     private boolean isLoading;
@@ -32,7 +35,7 @@ public class GridRecyclerFragment extends Fragment {
     private int lastVisibleItem, totalItemCount;
 
     public GridRecyclerFragment() {
-        // Required empty public constructor
+
     }
 
     public void setOnLoadMoreListener(OnLoadMoreListener mOnLoadMoreListener) {
@@ -57,39 +60,130 @@ public class GridRecyclerFragment extends Fragment {
     }
 
     @Override
+
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        movieGridRecycler = (RecyclerView) view.findViewById(R.id.grid_recycler);
-        message = (TextView) view.findViewById(R.id.message);
+        movieGridRecycler1 = view.findViewById(R.id.grid_recycler);
+        movieGridRecycler2 = view.findViewById(R.id.grid_recycler1);
+        movieGridRecycler3 = view.findViewById(R.id.grid_recycler2);
+
+        message = view.findViewById(R.id.message);
+
+
         if (movies != null) {
-            gridLayoutManager = new GridLayoutManager(getContext(), 3);
-            movieGridRecycler.setLayoutManager(gridLayoutManager);
 
+            final LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+
+            movieGridRecycler1.setLayoutManager(linearLayoutManager1);
             gridRecyclerAdapter = new GridRecyclerAdapter(getContext(), movies);
-            movieGridRecycler.setAdapter(gridRecyclerAdapter);
+            movieGridRecycler1.setAdapter(gridRecyclerAdapter);
+            movieGridRecycler1.setItemAnimator(new DefaultItemAnimator());
+            movieGridRecycler1.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(2), false));
+            movieGridRecycler1.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
-            movieGridRecycler.setItemAnimator(new DefaultItemAnimator());
-            movieGridRecycler.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(2), false));
-
-            movieGridRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
                 @Override
+
                 public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                     super.onScrolled(recyclerView, dx, dy);
 
-                    totalItemCount = gridLayoutManager.getItemCount();
-                    lastVisibleItem = gridLayoutManager.findLastVisibleItemPosition();
+                    totalItemCount = linearLayoutManager1.getItemCount();
+                    lastVisibleItem = linearLayoutManager1.findLastVisibleItemPosition();
 
                     if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
                         if (mOnLoadMoreListener != null) {
                             mOnLoadMoreListener.onLoadMore();
                         }
+
                         isLoading = true;
                     }
                 }
             });
 
-            movieGridRecycler.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler) {
+            final LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+
+            movieGridRecycler2.setLayoutManager(linearLayoutManager2);
+            gridRecyclerAdapter = new GridRecyclerAdapter(getContext(), movies);
+            movieGridRecycler2.setAdapter(gridRecyclerAdapter);
+            movieGridRecycler2.setItemAnimator(new DefaultItemAnimator());
+            movieGridRecycler2.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(2), false));
+            movieGridRecycler2.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+                @Override
+
+                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                    super.onScrolled(recyclerView, dx, dy);
+
+                    totalItemCount = linearLayoutManager2.getItemCount();
+                    lastVisibleItem = linearLayoutManager2.findLastVisibleItemPosition();
+
+                    if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
+                        if (mOnLoadMoreListener != null) {
+                            mOnLoadMoreListener.onLoadMore();
+                        }
+
+                        isLoading = true;
+                    }
+                }
+            });
+
+            final LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+            movieGridRecycler3.setLayoutManager(linearLayoutManager3);
+            gridRecyclerAdapter = new GridRecyclerAdapter(getContext(), movies);
+            movieGridRecycler3.setAdapter(gridRecyclerAdapter);
+            movieGridRecycler3.setItemAnimator(new DefaultItemAnimator());
+            movieGridRecycler3.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(2), false));
+            movieGridRecycler3.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+                @Override
+
+                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                    super.onScrolled(recyclerView, dx, dy);
+
+                    totalItemCount = linearLayoutManager3.getItemCount();
+                    lastVisibleItem = linearLayoutManager3.findLastVisibleItemPosition();
+
+                    if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
+                        if (mOnLoadMoreListener != null) {
+                            mOnLoadMoreListener.onLoadMore();
+
+                        }
+
+                        isLoading = true;
+                    }
+                }
+            });
+
+            movieGridRecycler1.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler1) {
+
+                @Override
+                public boolean onClick(RecyclerView parent, View view, int position, long id) {
+                    BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
+                    Bundle bundle = new Bundle();
+                    MovieSearchList.Search movie = movies.get(position);
+                    bundle.putString("title", movie.getTitle());
+                    bundle.putString("release", movie.getType());
+                    bundle.putString("time", movie.getYear());
+                    bundle.putString("description", movie.getYear());
+                    bundle.putString("poster", movie.getPoster());
+                    bottomSheetDialogFragment.setArguments(bundle);
+                    bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+                    return true;
+
+                }
+
+                @Override
+                public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
+                    return false;
+                }
+
+                @Override
+                public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+                }
+            });
+
+            movieGridRecycler2.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler2) {
 
                 @Override
                 public boolean onClick(RecyclerView parent, View view, int position, long id) {
@@ -116,8 +210,39 @@ public class GridRecyclerFragment extends Fragment {
 
                 }
             });
+
+            movieGridRecycler3.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler3) {
+                @Override
+                public boolean onClick(RecyclerView parent, View view, int position, long id) {
+                    BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
+                    Bundle bundle = new Bundle();
+                    MovieSearchList.Search movie = movies.get(position);
+                    bundle.putString("title", movie.getTitle());
+                    bundle.putString("release", movie.getType());
+                    bundle.putString("time", movie.getYear());
+                    bundle.putString("description", movie.getYear());
+                    bundle.putString("poster", movie.getPoster());
+                    bottomSheetDialogFragment.setArguments(bundle);
+                    bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+                    return true;
+                }
+
+                @Override
+                public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
+                    return false;
+                }
+
+                @Override
+                public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+                }
+            });
+
         }
-        movieGridRecycler.setVisibility(View.GONE);
+
+        movieGridRecycler1.setVisibility(View.GONE);
+        movieGridRecycler2.setVisibility(View.GONE);
+        movieGridRecycler3.setVisibility(View.GONE);
         message.setVisibility(View.VISIBLE);
     }
 
@@ -129,4 +254,5 @@ public class GridRecyclerFragment extends Fragment {
     public void setLoaded() {
         isLoading = false;
     }
+
 }

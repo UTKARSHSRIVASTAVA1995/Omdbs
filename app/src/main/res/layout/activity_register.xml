@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:hint="Name"
+            android:hint="First Name"
             android:inputType="text"
             android:maxLines="1" />
 
@@ -106,12 +106,14 @@
     <Button
 
         android:id="@+id/appCompatButtonRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="376dp"
+        android:layout_height="37dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:background="#6FACA7A7"
-        android:text="Register" />
+        android:background="#356CD8"
+        android:text="Sign up"
+        android:textColor="#F7F3F3"
+        android:textStyle="bold" />
 
     <LinearLayout
 
@@ -125,8 +127,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Already a member? Login"
+            android:text="Already have an account? Login"
             android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Follow us"
+            android:textSize="20dp" />
 
     </LinearLayout>
 

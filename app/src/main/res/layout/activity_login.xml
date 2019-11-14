@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-    
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -9,31 +9,41 @@
     android:orientation="vertical">
 
 
-    <RelativeLayout
+    <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:background="#E97171"
-        android:orientation="vertical">
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
 
-        <TextView
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="OMDB"
-            android:textColor="#FDFDFD"
-            android:textSize="70dp"
-            android:textStyle="italic" />
+            android:layout_gravity="bottom">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="22dp"
+                android:text="Login your account"
+                android:textColor="#474747"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.4"
-        android:background="#E97171"
+        android:background="#FFFFFF"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -44,7 +54,7 @@
             android:background="@drawable/email_edittext"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColorHint="#FFFFFF">
+            android:textColorHint="#000">
 
             <com.google.android.material.textfield.TextInputEditText
 
@@ -52,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:hint="Email"
+                android:hint="Enter your E-mail ID"
                 android:inputType="text"
                 android:maxLines="1" />
 
@@ -66,7 +76,7 @@
             android:background="@drawable/pass_edittext"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#000"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -85,12 +95,14 @@
         <Button
 
             android:id="@+id/appCompatButtonLogin"
-            android:layout_width="329dp"
-            android:layout_height="37dp"
+            android:layout_width="326dp"
+            android:layout_height="32dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:background="@drawable/rounded_button"
-            android:text="Login" />
+            android:background="#356CD8"
+            android:text="Login"
+            android:textColor="#FEFEFF"
+            android:textStyle="bold" />
 
         <TextView
 
@@ -99,9 +111,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="No Account yet? Create one"
-            android:textColor="#FFFFFF"
+            android:text="Create an account? click here "
+            android:textColor="#0F0F0F"
             android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="50dp"
+            android:text="Follow us"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
 
     </LinearLayout>
 

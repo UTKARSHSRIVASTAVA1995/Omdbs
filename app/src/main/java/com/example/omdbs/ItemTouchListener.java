@@ -14,9 +14,9 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
 
     private GestureDetector mGestureDetector;
 
-    public ItemTouchListener(RecyclerView hostView) {
-        mGestureDetector = new ItemClickGestureDetector(hostView.getContext(),
-                new ItemClickGestureListener(hostView));
+   public ItemTouchListener(RecyclerView hostView) {
+        //mGestureDetector = new ItemClickGestureDetector(hostView.getContext(),
+                //new ItemClickGestureListener(hostView));
     }
 
     private boolean isAttachedToWindow(RecyclerView hostView) {
@@ -121,6 +121,7 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
 
         @Override
         public boolean onScroll(MotionEvent event, MotionEvent event2, float v, float v2) {
+
             if (mTargetChild != null) {
                 mTargetChild.setPressed(false);
                 mTargetChild = null;
@@ -142,6 +143,7 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
             final boolean handled = onLongClick(mHostView, mTargetChild, position, id);
 
             if (handled) {
+
                 mTargetChild.setPressed(false);
                 mTargetChild = null;
             }

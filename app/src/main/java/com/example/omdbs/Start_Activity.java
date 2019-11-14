@@ -120,8 +120,8 @@ public class Start_Activity extends AppCompatActivity {
                 public void onResponse(Call<MovieSearchList> call, Response<MovieSearchList> response) {
 
 
-                    if(response.isSuccessful()){
-                        Log.e("ttttette", "response 1133313: "+response.toString() );
+                    if (response.isSuccessful()) {
+                        Log.e("ttttette", "response 1133313: " + response.toString());
                     }
                     Log.d("movieearchRequestUrl", String.valueOf(call.request()));
                     Log.d("MovieSearchResponsecode", String.valueOf(response.code()));
@@ -129,22 +129,27 @@ public class Start_Activity extends AppCompatActivity {
                     String apiResponse = response.body().toString();
                     Log.d("apiResponse", apiResponse);
 
-                    if (response.body() instanceof MovieSearchList ){
-                        MovieSearchList movieSearchList = (MovieSearchList) response.body();
+                    if (response.body() instanceof MovieSearchList) {
+                        MovieSearchList movieSearchList = response.body();
                         if (movieSearchList.getResponse().equals("True")) {
                             pagesLoaded++;
                             getSearchMovies(movieSearchList);
                             gridFragment.message.setVisibility(View.GONE);
-                            gridFragment.movieGridRecycler.setVisibility(View.VISIBLE);
+                            gridFragment.movieGridRecycler1.setVisibility(View.VISIBLE);
+                            gridFragment.movieGridRecycler2.setVisibility(View.VISIBLE);
+                            gridFragment.movieGridRecycler3.setVisibility(View.VISIBLE);
                             progressDialog.dismiss();
+
                         } else {
+
                             progressDialog.dismiss();
                             gridFragment.message.setText("No movies found. Try again.");
                             gridFragment.message.setVisibility(View.VISIBLE);
-                            gridFragment.movieGridRecycler.setVisibility(View.GONE);
+                            gridFragment.movieGridRecycler1.setVisibility(View.GONE);
+                            gridFragment.movieGridRecycler2.setVisibility(View.GONE);
+                            gridFragment.movieGridRecycler3.setVisibility(View.GONE);
                         }
                     }
-
                 }
 
                 @Override
@@ -153,11 +158,14 @@ public class Start_Activity extends AppCompatActivity {
                     progressDialog.dismiss();
                     gridFragment.message.setText("Query request failed. Try again");
                     gridFragment.message.setVisibility(View.VISIBLE);
-                    gridFragment.movieGridRecycler.setVisibility(View.GONE);
+                    gridFragment.movieGridRecycler1.setVisibility(View.GONE);
+                    gridFragment.movieGridRecycler2.setVisibility(View.GONE);
+                    gridFragment.movieGridRecycler3.setVisibility(View.GONE);
                 }
             });
         } else {
             if (!reachedEnd) {
+
                 ApiCall.Factory.getInstance().searchMovie("a4f7d196",query, String.valueOf(pagesLoaded)).enqueue(new Callback<MovieSearchList>() {
                     @Override
                     public void onResponse(Call<MovieSearchList> call, Response<MovieSearchList> response) {
