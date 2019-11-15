@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEE8E8">
+    android:background="#FFFFFF">
 
 
     <TextView
@@ -38,7 +38,7 @@
         android:layout_below="@+id/tv2"
         android:layout_centerInParent="true"
         android:layout_marginTop="38dp"
-        android:src="@drawable/lan" />
+        android:src="@drawable/land" />
 </LinearLayout>
 
 
