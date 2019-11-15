@@ -21,12 +21,14 @@ public class InputValidation {
     }
 
     public boolean isInputEditTextFilled(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String message) {
+
         String value = textInputEditText.getText().toString().trim();
         if (value.isEmpty()) {
             textInputLayout.setError(message);
             hideKeyboardFrom(textInputEditText);
             return false;
         } else {
+
             textInputLayout.setErrorEnabled(false);
         }
         return true;
@@ -41,6 +43,7 @@ public class InputValidation {
         } else {
             textInputLayout.setErrorEnabled(false);
         }
+
         return true;
     }
 
@@ -56,7 +59,6 @@ public class InputValidation {
         }
         return true;
     }
-
     private void hideKeyboardFrom(View view) {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);

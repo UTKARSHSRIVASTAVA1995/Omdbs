@@ -61,7 +61,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         appCompatButtonLogin = findViewById(R.id.appCompatButtonLogin);
         textViewLinkRegister = findViewById(R.id.textViewLinkRegister);
 
-
     }
 
     @Override
@@ -106,8 +105,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 }
 
- //   private void emptyInputEditText() {
-   //     textInputEditTextEmail.setText(null);
-     //   textInputEditTextPassword.setText(null);
-    //}
+//  private void emptyInputEditText() {
+//     textInputEditTextEmail.setText(null);
+//   textInputEditTextPassword.setText(null);
+//}
 //}

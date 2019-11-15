@@ -29,7 +29,8 @@ public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     @Override
-    public int getItemViewType(int position) {
+    public int getItemViewType(int position)
+    {
         return movies.get(position) == null ? VIEW_TYPE_LOADING : VIEW_TYPE_ITEM;
     }
 

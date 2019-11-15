@@ -13,28 +13,29 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="1.6"
         android:background="#FFFFFF"
         android:orientation="horizontal">
 
 
         <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:paddingLeft="22dp"
-                android:text="Login your account"
-                android:textColor="#474747"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
         </LinearLayout>
 
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingLeft="22dp"
+            android:text="Login your account"
+            android:textColor="#3F3E3E"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -116,15 +117,24 @@
             android:textSize="18sp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv4"
+            android:layout_width="207dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="50dp"
-            android:text="Follow us"
-            android:textColor="#000"
+            android:layout_marginTop="40dp"
+            android:text="2001-2019 All Rights Reserved"
             android:textSize="14sp" />
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy and Terms"
+            android:textColor="#555353"
+            android:layout_gravity="center" />
     </LinearLayout>
+
+
+
+
 
 </LinearLayout>

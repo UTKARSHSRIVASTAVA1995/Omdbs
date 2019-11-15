@@ -121,6 +121,7 @@ public class Start_Activity extends AppCompatActivity {
 
 
                     if (response.isSuccessful()) {
+
                         Log.e("ttttette", "response 1133313: " + response.toString());
                     }
                     Log.d("movieearchRequestUrl", String.valueOf(call.request()));
@@ -164,6 +165,7 @@ public class Start_Activity extends AppCompatActivity {
                 }
             });
         } else {
+
             if (!reachedEnd) {
 
                 ApiCall.Factory.getInstance().searchMovie("a4f7d196",query, String.valueOf(pagesLoaded)).enqueue(new Callback<MovieSearchList>() {

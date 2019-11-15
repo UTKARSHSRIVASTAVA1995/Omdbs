@@ -68,6 +68,7 @@ public class GridRecyclerFragment extends Fragment {
         movieGridRecycler2 = view.findViewById(R.id.grid_recycler1);
         movieGridRecycler3 = view.findViewById(R.id.grid_recycler2);
 
+
         message = view.findViewById(R.id.message);
 
 

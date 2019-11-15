@@ -2,33 +2,30 @@ package com.example.omdbs;
 
 
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-
+import android.view.View;
+import android.widget.Button;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
 
 
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing);
+        setContentView(R.layout.activity_main);
+        Button button =  findViewById(R.id.btn_1);
 
-
-        new Handler().postDelayed(new Runnable() {
-
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                MainActivity.this.startActivity(intent);
-                MainActivity.this.finish();
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
             }
-        },SPLASH_DISPLAY_LENGTH);
+        });
+
     }
 }

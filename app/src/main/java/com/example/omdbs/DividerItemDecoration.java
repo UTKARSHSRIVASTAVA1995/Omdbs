@@ -27,12 +27,14 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         mDivider = a.getDrawable(0);
         a.recycle();
         setOrientation(orientation);
+
     }
 
     public void setOrientation(int orientation) {
         if (orientation != HORIZONTAL_LIST && orientation != VERTICAL_LIST) {
             throw new IllegalArgumentException("invalid orientation");
         }
+        
         mOrientation = orientation;
     }
 
