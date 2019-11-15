@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
 
     <TextView
+
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="Design Studio"
         android:textColor="#000"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
+        android:textStyle="bold" />
 
     <TextView
+
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,23 +27,27 @@
         android:text="Join our creative network"
         android:textColor="#474646" />
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/tv2"
-    android:layout_centerInParent="true">
+    <LinearLayout
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="288dp"
-        android:layout_below="@+id/tv2"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="38dp"
-        android:src="@drawable/land" />
-</LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:layout_centerInParent="true">
+
+        <ImageView
+
+            android:layout_width="350dp"
+            android:layout_height="288dp"
+            android:layout_below="@+id/tv2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/land" />
+
+    </LinearLayout>
 
 
     <RelativeLayout
+
         android:layout_width="297dp"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
@@ -50,6 +55,7 @@
         android:layout_marginBottom="120dp">
 
         <Button
+
             android:id="@+id/btn_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,6 +67,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -68,14 +75,17 @@
         android:layout_marginBottom="90dp">
 
         <TextView
+
             android:id="@+id/tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2001-2019 All Rights Reserved"
             android:textSize="14sp" />
+
     </RelativeLayout>
 
     <RelativeLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -86,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Privacy and Terms"
-            android:textColor="#555353"/>
+            android:textColor="#555353" />
 
     </RelativeLayout>
 

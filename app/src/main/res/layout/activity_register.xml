@@ -6,41 +6,44 @@
     android:orientation="vertical">
 
     <LinearLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="15dp">
+        android:paddingLeft="20dp">
 
         <TextView
+
             android:id="@+id/tv6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Design Studio"
             android:textColor="#000"
             android:textSize="22sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
+
             android:id="@+id/tv7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Join our creative network"
-            android:textColor="#474646"/>
+            android:textColor="#474646" />
 
 
     </LinearLayout>
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
         android:text="Create your account"
         android:textColor="#5C5A5A"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
         android:textSize="17dp"
-        android:textStyle="bold"/>
-
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
 
@@ -71,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" >
+        android:paddingRight="10dp">
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -81,8 +84,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:hint="Company Organization"
-            android:maxLength="16"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:maxLength="16" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -175,32 +178,34 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Already have an account? Login"
-            android:textSize="16sp"
-            android:textColor="#0F0F0F"/>
+            android:textColor="#0F0F0F"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center">
 
         <TextView
+
             android:id="@+id/tv5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="2001-2019 All Rights Reserved"/>
+            android:text="2001-2019 All Rights Reserved" />
 
     </LinearLayout>
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Privacy and Terms"
-        android:textColor="#555353"
-        android:layout_gravity="center" />
-
+        android:textColor="#555353" />
 
 </LinearLayout>

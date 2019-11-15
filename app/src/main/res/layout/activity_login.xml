@@ -6,8 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -21,26 +21,23 @@
 
     </LinearLayout>
 
-        <LinearLayout
+    <LinearLayout
 
-            android:layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="10dp">
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:paddingLeft="22dp"
-                android:text="Login your account"
-                android:textColor="#3F3E3E"
-                android:textSize="17dp"
-                android:textStyle="bold" />
-
-
-
+            android:paddingLeft="22dp"
+            android:text="Login your account"
+            android:textColor="#3F3E3E"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -122,6 +119,7 @@
             android:textSize="16sp" />
 
         <TextView
+
             android:id="@+id/tv4"
             android:layout_width="207dp"
             android:layout_height="wrap_content"
@@ -131,15 +129,12 @@
             android:textSize="14sp" />
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Privacy and Terms"
             android:textColor="#555353" />
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>
