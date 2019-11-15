@@ -3,7 +3,7 @@ package com.example.omdbs;
 public class User {
 
     private int id;
-    private String creditCard;
+    private String CompanyOrganization;
     private String name;
     private String email;
     private String password;
@@ -41,12 +41,12 @@ public class User {
         this.password = password;
     }
 
-    public String getCreditCard() {
-        return creditCard;
+    public String getCompanyOrganization() {
+        return CompanyOrganization;
     }
 
-    public void setCreditCard(String creditCard) {
-        this.creditCard = creditCard;
+    public void setCompanyOrganization(String companyOrganization) {
+        this.CompanyOrganization = companyOrganization;
     }
 }
 

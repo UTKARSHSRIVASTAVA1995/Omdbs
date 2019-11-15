@@ -53,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
-        values.put(COLUMN_USER_CREDIT_CARD, user.getCreditCard());
+        values.put(COLUMN_USER_CREDIT_CARD, user.getCompanyOrganization());
         db.insert(TABLE_USER, null, values);
         db.close();
     }
@@ -73,7 +73,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_USER_NAME)));
                 user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USER_EMAIL)));
                 user.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PASSWORD)));
-                user.setCreditCard(cursor.getString(cursor.getColumnIndex(COLUMN_USER_CREDIT_CARD)));
+                user.setCompanyOrganization(cursor.getString(cursor.getColumnIndex(COLUMN_USER_CREDIT_CARD)));
                 userList.add(user);
             }
             while (cursor.moveToNext());
@@ -91,7 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
-        values.put(COLUMN_USER_CREDIT_CARD, user.getCreditCard());
+        values.put(COLUMN_USER_CREDIT_CARD, user.getCompanyOrganization());
         db.update(TABLE_USER, values, COLUMN_USER_ID + " = ?",
                 new String[]{String.valueOf(user.getId())});
         db.close();

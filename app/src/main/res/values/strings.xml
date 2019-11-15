@@ -9,7 +9,7 @@
     <string name="text_login">Login</string>
     <string name="text_register">Register</string>
     <string name="error_message_name">Enter Full Name</string>
-    <string name="error_message_credit_card">Enter 16 digit Credit Card Number </string>
+    <string name="error_message_company_organization">Enter Organization </string>
     <string name="error_message_email">Enter Valid Email</string>
     <string name="error_message_verifyemail">Enter Same Value as Above</string>
     <string name="error_message_age">Enter Age</string>

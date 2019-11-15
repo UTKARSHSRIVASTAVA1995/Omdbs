@@ -5,19 +5,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Design Studio"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join our creative network" />
+    </LinearLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/textInputLayoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
 
             android:id="@+id/textInputEditTextName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:hint="First Name"
             android:inputType="text"
@@ -28,21 +53,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/textInputLayoutCreditCard"
+        android:id="@+id/textInputLayoutCompanyOrganization"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
 
         <com.google.android.material.textfield.TextInputEditText
 
-            android:id="@+id/textInputEditTextCreditCard"
+            android:id="@+id/textInputEditTextCompanyOrganization"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:hint="Credit Card"
+            android:hint="Company Organization"
             android:maxLength="16"
-            android:inputType="number"/>
+            android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +78,9 @@
         android:id="@+id/textInputLayoutEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -59,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:hint="Email"
+            android:hint="Enter your E-mail id"
             android:inputType="text"
             android:maxLines="1" />
 
@@ -70,7 +99,9 @@
         android:id="@+id/textInputLayoutVerifyEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -89,7 +120,9 @@
         android:id="@+id/textInputLayoutPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -103,14 +136,15 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
 
         android:id="@+id/appCompatButtonRegister"
-        android:layout_width="376dp"
-        android:layout_height="37dp"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:background="#356CD8"
+        android:background="@drawable/button_bg"
         android:text="Sign up"
         android:textColor="#F7F3F3"
         android:textStyle="bold" />
@@ -135,16 +169,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
         <TextView
+            android:id="@+id/tv5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Follow us"
-            android:textSize="20dp" />
+            android:text="2001-2019 All Rights Reserved"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Privacy and Terms"
+        android:textColor="#555353"
+        android:layout_gravity="center" />
+
 
 </LinearLayout>

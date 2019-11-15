@@ -34,7 +34,7 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         holder.textViewName.setText(listUsers.get(position).getName());
         holder.textViewEmail.setText(listUsers.get(position).getEmail());
         holder.textViewPassword.setText(listUsers.get(position).getPassword());
-        holder.textViewCreditCard.setText(listUsers.get(position).getCreditCard());
+        holder.textViewCreditCard.setText(listUsers.get(position).getCompanyOrganization());
     }
 
     @Override

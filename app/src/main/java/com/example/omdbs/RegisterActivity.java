@@ -17,12 +17,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
     private TextInputLayout textInputLayoutName;
-    private TextInputLayout textInputLayoutCreditCard;
+    private TextInputLayout textInputLayoutCompanyOrganization;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
     private TextInputLayout textInputLayoutVerifyEmail;
     private TextInputEditText textInputEditTextName;
-    private TextInputEditText textInputEditTextCreditCard;
+    private TextInputEditText textInputEditTextCompanyOrganization;
     private TextInputEditText textInputEditTextEmail;
     private TextInputEditText textInputEditTextPassword;
     private TextInputEditText textInputEditTextVerifyEmail;
@@ -61,12 +61,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void initViews() {
 
         textInputLayoutName = findViewById(R.id.textInputLayoutName);
-        textInputLayoutCreditCard = findViewById(R.id.textInputLayoutCreditCard);
+        textInputLayoutCompanyOrganization = findViewById(R.id.textInputLayoutCompanyOrganization);
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
         textInputLayoutVerifyEmail = findViewById(R.id.textInputLayoutVerifyEmail);
         textInputEditTextName = findViewById(R.id.textInputEditTextName);
-        textInputEditTextCreditCard = findViewById(R.id.textInputEditTextCreditCard);
+        textInputEditTextCompanyOrganization = findViewById(R.id.textInputEditTextCompanyOrganization);
         textInputEditTextEmail = findViewById(R.id.textInputEditTextEmail);
         textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
         textInputEditTextVerifyEmail = findViewById(R.id.textInputEditTextVerifyEmail);
@@ -96,9 +96,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if (!inputValidation.isInputEditTextFilled(textInputEditTextCreditCard, textInputLayoutCreditCard, getString(R.string.error_message_credit_card))) {
-            String value = textInputEditTextCreditCard.getText().toString().trim();
-            Integer.parseInt(value);
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextCompanyOrganization, textInputLayoutCompanyOrganization, getString(R.string.error_message_company_organization))) {
+
             return;
         }
 
@@ -121,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setName(textInputEditTextName.getText().toString().trim());
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
-            user.setCreditCard(textInputEditTextCreditCard.getText().toString().trim());
+            user.setCompanyOrganization(textInputEditTextCompanyOrganization.getText().toString().trim());
             databaseHelper.addUser(user);
         } else {
         }
