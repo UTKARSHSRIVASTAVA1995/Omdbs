@@ -27,7 +27,19 @@
             android:layout_height="wrap_content"
             android:text="Join our creative network"
             android:textColor="#474646"/>
+
+
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your account"
+        android:textColor="#5C5A5A"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -35,7 +47,7 @@
         android:id="@+id/textInputLayoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -57,7 +69,7 @@
         android:id="@+id/textInputLayoutCompanyOrganization"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp" >
 
@@ -79,7 +91,7 @@
         android:id="@+id/textInputLayoutEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -100,7 +112,7 @@
         android:id="@+id/textInputLayoutVerifyEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -121,7 +133,7 @@
         android:id="@+id/textInputLayoutPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
