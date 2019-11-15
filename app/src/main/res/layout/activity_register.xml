@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/tv6"
@@ -25,7 +25,8 @@
             android:id="@+id/tv7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Join our creative network" />
+            android:text="Join our creative network"
+            android:textColor="#474646"/>
     </LinearLayout>
 
 

@@ -96,8 +96,8 @@
         <Button
 
             android:id="@+id/appCompatButtonLogin"
-            android:layout_width="326dp"
-            android:layout_height="32dp"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/button_bg"
