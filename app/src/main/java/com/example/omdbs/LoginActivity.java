@@ -2,6 +2,7 @@ package com.example.omdbs;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.omdbs.dashboard.DashboardActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -95,7 +97,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
 
-            Intent accountsIntent = new Intent(activity, Start_Activity.class);
+            SharedPreferences.Editor editor = getSharedPreferences("datasaving", MODE_PRIVATE).edit();
+            editor.putString("loggedIn", "userlogged");
+            editor.apply();
+
+            Intent accountsIntent = new Intent(activity, DashboardActivity.class);
             //accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             //emptyInputEditText();
             startActivity(accountsIntent);

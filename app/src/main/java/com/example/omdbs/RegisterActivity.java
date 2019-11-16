@@ -1,5 +1,7 @@
 package com.example.omdbs;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.omdbs.dashboard.DashboardActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -81,7 +84,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
 
             case R.id.appCompatButtonRegister:
-                Toast.makeText(RegisterActivity.this, "Registration SuccessFull", Toast.LENGTH_LONG).show();
                 postDataToSQLite();
                 break;
             case R.id.appCompatTextViewLoginLink:
@@ -114,6 +116,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return;
+
+            
         }
 
         if (!databaseHelper.checkUsers(textInputEditTextEmail.getText().toString().trim())) {
@@ -122,7 +126,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
             user.setCompanyOrganization(textInputEditTextCompanyOrganization.getText().toString().trim());
             databaseHelper.addUser(user);
+
+            SharedPreferences.Editor editor = getSharedPreferences("datasaving", MODE_PRIVATE).edit();
+            editor.putString("loggedIn", "userlogged");
+            editor.apply();
+
+            Toast.makeText(RegisterActivity.this, "Registration SuccessFull", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(RegisterActivity.this, DashboardActivity.class));
         } else {
+            Toast.makeText(RegisterActivity.this, "Registration not SuccessFull", Toast.LENGTH_LONG).show();
         }
     }
 }

@@ -8,4 +8,5 @@
     <color name="colorTextHint">#51d8c7</color>
     <color name="colorTextRegister">#EE918C8C</color>
     <color name="Landing">#3C3F41</color>
+    <color name="darkgrey">#EE353333</color>
 </resources>
