@@ -1,74 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <ScrollView
+
         android:id="@+id/scrollView"
-        android:visibility="visible"
-        android:layout_above="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:visibility="visible">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:background="@android:color/black"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:orientation="vertical">
+
             <TextView
+
                 android:id="@+id/title1"
-                android:text="Batman movies"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Trending Now"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/rvList1"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"/>
+                android:layout_height="120dp" />
+
             <TextView
+
                 android:id="@+id/title2"
-                android:text="Superman Movies"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Bollywood Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/rvList2"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"/>
+                android:layout_height="120dp" />
+
             <TextView
+
                 android:id="@+id/title3"
-                android:text="King movies"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Romantic Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/rvList3"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"/>
+                android:layout_height="120dp" />
+
             <TextView
+
                 android:id="@+id/title4"
-                android:text="Aquaman"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Hindi Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/rvList4"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"/>
+                android:layout_height="120dp" />
+
             <TextView
+
                 android:id="@+id/title5"
-                android:textColor="@android:color/white"
-                android:text="Deadpool Movies"
-                android:textSize="18sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Batman Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/rvList5"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"/>
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Superman Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList6"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquaman Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList7"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deadpool Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList8"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hollywood Movies"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList9"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fast and furious"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList10"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </LinearLayout>

@@ -24,7 +24,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         prefs = getSharedPreferences("datasaving", MODE_PRIVATE);
-        loggedIn = prefs.getString("loggedIn", "");//"No name defined" is the default value.
+        loggedIn = prefs.getString("loggedIn", "");
 
 
 
@@ -33,7 +33,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                //The following code will execute after the 5 seconds.
+
 
                 try {
 
@@ -49,7 +49,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     ignored.printStackTrace();
                 }
             }
-        }, 5000);
+        }, 3000);
 
 
 

@@ -1,39 +1,22 @@
 package com.example.omdbs.dashboard;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.os.Bundle;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.omdbs.ApiCall;
-import com.example.omdbs.GridSpacingItemDecoration;
-import com.example.omdbs.MovieRecyclerAdapter;
-import com.example.omdbs.MovieSearchList;
+import android.os.Bundle;
+
+import android.widget.FrameLayout;
+
 import com.example.omdbs.R;
 import com.example.omdbs.fragments.MovieListFragment;
 import com.example.omdbs.fragments.MyAccountFragment;
-import com.example.omdbs.utilities.SpacesItemDecoration;
+
 import com.ss.bottomnavigation.BottomNavigation;
 import com.ss.bottomnavigation.events.OnSelectedItemChangeListener;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class DashboardActivity extends AppCompatActivity {
@@ -51,12 +34,12 @@ public class DashboardActivity extends AppCompatActivity {
         initViews();
     }
 
-    /*Inizialize Views*/
+
     private void initViews(){
 
 
-        bottomNavigation=(BottomNavigation)findViewById(R.id.bottom_navigation);
-        frame_fragment_containers=(FrameLayout) findViewById(R.id.frame_fragment_containers);
+        bottomNavigation=findViewById(R.id.bottom_navigation);
+        frame_fragment_containers= findViewById(R.id.frame_fragment_containers);
 
 
         bottomNavigation.setOnSelectedItemChangeListener(new OnSelectedItemChangeListener() {
@@ -93,7 +76,6 @@ public class DashboardActivity extends AppCompatActivity {
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
-                // Do nothing but close the dialog
 
                 dialog.dismiss();
                 finish();
@@ -105,7 +87,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                // Do nothing
+
                 dialog.dismiss();
             }
         });

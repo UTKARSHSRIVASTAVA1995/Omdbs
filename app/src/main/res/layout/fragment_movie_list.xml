@@ -4,39 +4,46 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.ss.bottomnavigation.BottomNavigation
+
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="@color/darkgrey">
+
         <com.ss.bottomnavigation.TabItem
+
             android:id="@+id/tab_home"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_text="Home"
-            app:tab_icon="@drawable/ic_home"
-            />
+            app:tab_icon="@drawable/ic_home" />
+
         <com.ss.bottomnavigation.TabItem
+
             android:id="@+id/tab_downlaod"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_text="Download"
-            app:tab_icon="@drawable/ic_home"
-            />
+            app:tab_icon="@drawable/ic_home" />
 
         <com.ss.bottomnavigation.TabItem
+
             android:id="@+id/tab_account"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_text="My Account"
-            app:tab_icon="@drawable/ic_account"
-            />
+            app:tab_icon="@drawable/ic_account" />
+
     </com.ss.bottomnavigation.BottomNavigation>
+
 <ScrollView
+
     android:id="@+id/scrollView"
     android:visibility="gone"
     android:layout_above="@+id/bottom_navigation"
@@ -44,66 +51,158 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+
         android:orientation="vertical"
         android:background="@android:color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     <TextView
+
         android:id="@+id/title1"
-        android:text="Batman movies"
+        android:text="Trending Now"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/rvList1"
         android:layout_width="match_parent"
-        android:layout_height="120dp"/>
+        android:layout_height="120dp" />
+
     <TextView
+
         android:id="@+id/title2"
-        android:text="Superman Movies"
+        android:text="Bollywood Movies"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvList2"
         android:layout_width="match_parent"
         android:layout_height="120dp"/>
+
     <TextView
+
         android:id="@+id/title3"
-        android:text="King movies"
+        android:text="Romantic Movies"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/rvList3"
         android:layout_width="match_parent"
         android:layout_height="120dp"/>
+
     <TextView
+
         android:id="@+id/title4"
-        android:text="Aquaman"
+        android:text="Hindi Movies"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/rvList4"
         android:layout_width="match_parent"
         android:layout_height="120dp"/>
+
     <TextView
+
         android:id="@+id/title5"
         android:textColor="@android:color/white"
-        android:text="Deadpool Movies"
+        android:text="Batman Movies"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/rvList5"
         android:layout_width="match_parent"
         android:layout_height="120dp"/>
+        <TextView
+
+            android:id="@+id/title6"
+            android:textColor="@android:color/white"
+            android:text="Superman Movies"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rvList6"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+        <TextView
+
+            android:id="@+id/title7"
+            android:textColor="@android:color/white"
+            android:text="Aquaman Movies"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rvList7"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+        <TextView
+
+            android:id="@+id/title8"
+            android:textColor="@android:color/white"
+            android:text="Deadpool Movies"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rvList8"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+        <TextView
+
+            android:id="@+id/title9"
+            android:textColor="@android:color/white"
+            android:text="Hollywood Movies"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rvList9"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+        <TextView
+
+            android:id="@+id/title10"
+            android:textColor="@android:color/white"
+            android:text="Fast and furious"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rvList10"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
     </LinearLayout>
+
 </ScrollView>
 
     <FrameLayout
@@ -111,4 +210,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_navigation"/>
+
 </RelativeLayout>
