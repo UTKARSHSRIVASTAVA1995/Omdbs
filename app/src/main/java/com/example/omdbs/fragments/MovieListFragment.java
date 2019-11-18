@@ -5,25 +5,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.omdbs.ApiCall;
 import com.example.omdbs.MovieRecyclerAdapter;
 import com.example.omdbs.MovieSearchList;
 import com.example.omdbs.R;
-
 import com.example.omdbs.utilities.SpacesItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,19 +44,19 @@ public class MovieListFragment extends Fragment {
     private Integer movieApiCount = 1;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_home, container, false);
 
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
 
@@ -78,7 +74,6 @@ public class MovieListFragment extends Fragment {
         rvList8 = view.findViewById(R.id.rvList8);
         rvList9 = view.findViewById(R.id.rvList9);
         rvList10 = view.findViewById(R.id.rvList10);
-
 
         title1 = view.findViewById(R.id.title1);
         title2 = view.findViewById(R.id.title2);
@@ -107,24 +102,27 @@ public class MovieListFragment extends Fragment {
     private void getMovieList(final int movieApiCount, final String query) {
 
         ApiCall.Factory.getInstance().searchMovie("a4f7d196", query, "1").enqueue(new Callback<MovieSearchList>() {
+
             @Override
+
             public void onResponse(Call<MovieSearchList> call, Response<MovieSearchList> response) {
 
 
                 if (response.isSuccessful()) {
 
-
                     Log.d("movieearchRequestUrl", String.valueOf(call.request()));
                     Log.d("MovieSearchResponsecode", String.valueOf(response.code()));
-
                     String apiResponse = response.body().toString();
                     Log.d("apiResponse", apiResponse);
+
                 }
+
                 if (response.body() instanceof MovieSearchList) {
                     MovieSearchList movieSearchList = response.body();
                     if (movieSearchList.getResponse().equals("True")) {
 
                         int count = movieApiCount;
+
                         if (count == 1) {
                             setMovie1(movieSearchList.getSearch());
                         } else if (count == 2) {
@@ -146,8 +144,8 @@ public class MovieListFragment extends Fragment {
                         } else if (count == 10) {
                             setMovie10(movieSearchList.getSearch());
                         }
-
                     } else {
+
                         Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -163,6 +161,7 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie1(List<MovieSearchList.Search> movieSearchList) {
+
         movies1.clear();
         movies1 = movieSearchList;
         final LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -175,6 +174,7 @@ public class MovieListFragment extends Fragment {
 
 
     private void setMovie2(List<MovieSearchList.Search> movieSearchList) {
+
         movies2.clear();
         movies2 = movieSearchList;
         final LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -188,6 +188,7 @@ public class MovieListFragment extends Fragment {
 
 
     private void setMovie3(List<MovieSearchList.Search> movieSearchList) {
+
         movies3.clear();
         movies3 = movieSearchList;
         final LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -200,6 +201,7 @@ public class MovieListFragment extends Fragment {
 
 
     private void setMovie4(List<MovieSearchList.Search> movieSearchList) {
+
         movies4.clear();
         movies4 = movieSearchList;
         final LinearLayoutManager linearLayoutManager4 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -212,6 +214,7 @@ public class MovieListFragment extends Fragment {
 
 
     private void setMovie5(List<MovieSearchList.Search> movieSearchList) {
+
         movies5.clear();
         movies5 = movieSearchList;
         final LinearLayoutManager linearLayoutManager5 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -223,6 +226,7 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie6(List<MovieSearchList.Search> movieSearchList) {
+
         movies6.clear();
         movies6 = movieSearchList;
         final LinearLayoutManager linearLayoutManager6 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -234,6 +238,7 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie7(List<MovieSearchList.Search> movieSearchList) {
+
         movies7.clear();
         movies7 = movieSearchList;
         final LinearLayoutManager linearLayoutManager7 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -245,6 +250,7 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie8(List<MovieSearchList.Search> movieSearchList) {
+
         movies8.clear();
         movies8 = movieSearchList;
         final LinearLayoutManager linearLayoutManager8 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -256,6 +262,7 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie9(List<MovieSearchList.Search> movieSearchList) {
+
         movies9.clear();
         movies9 = movieSearchList;
         final LinearLayoutManager linearLayoutManager9 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
@@ -267,6 +274,7 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie10(List<MovieSearchList.Search> movieSearchList) {
+
         movies10.clear();
         movies10 = movieSearchList;
         final LinearLayoutManager linearLayoutManager10 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);

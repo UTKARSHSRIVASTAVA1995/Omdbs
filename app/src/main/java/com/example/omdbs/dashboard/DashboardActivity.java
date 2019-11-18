@@ -1,22 +1,18 @@
 package com.example.omdbs.dashboard;
 
 import android.content.DialogInterface;
-
 import android.os.Bundle;
-
 import android.widget.FrameLayout;
-
-import com.example.omdbs.R;
-import com.example.omdbs.fragments.MovieListFragment;
-import com.example.omdbs.fragments.MyAccountFragment;
-
-import com.ss.bottomnavigation.BottomNavigation;
-import com.ss.bottomnavigation.events.OnSelectedItemChangeListener;
-
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.omdbs.R;
+import com.example.omdbs.fragments.MovieListFragment;
+import com.example.omdbs.fragments.MyAccountFragment;
+import com.ss.bottomnavigation.BottomNavigation;
+import com.ss.bottomnavigation.events.OnSelectedItemChangeListener;
 
 
 public class DashboardActivity extends AppCompatActivity {
@@ -35,28 +31,31 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
 
-    private void initViews(){
+    private void initViews() {
 
 
-        bottomNavigation=findViewById(R.id.bottom_navigation);
-        frame_fragment_containers= findViewById(R.id.frame_fragment_containers);
-
+        bottomNavigation = findViewById(R.id.bottom_navigation);
+        frame_fragment_containers = findViewById(R.id.frame_fragment_containers);
 
         bottomNavigation.setOnSelectedItemChangeListener(new OnSelectedItemChangeListener() {
+
             @Override
             public void onSelectedItemChanged(int itemId) {
-                switch (itemId){
+                switch (itemId) {
                     case R.id.tab_home:
-                        transaction=getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_fragment_containers,new MovieListFragment());
+
+                        transaction = getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_fragment_containers, new MovieListFragment());
                         break;
                     case R.id.tab_downlaod:
-                        transaction=getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_fragment_containers,new MyAccountFragment());
+
+                        transaction = getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
                         break;
                     case R.id.tab_account:
-                        transaction=getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_fragment_containers,new MyAccountFragment());
+
+                        transaction = getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
                         break;
                 }
                 transaction.commit();
@@ -87,11 +86,9 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-
                 dialog.dismiss();
             }
         });
-
         AlertDialog alert = builder.create();
         alert.show();
     }

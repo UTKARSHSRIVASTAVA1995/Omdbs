@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_text="Download"
-            app:tab_icon="@drawable/ic_home" />
+            app:tab_icon="@drawable/ic_vertical_align_bottom_black_24dp" />
 
         <com.ss.bottomnavigation.TabItem
 
