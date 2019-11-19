@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,6 +25,7 @@
                 android:id="@+id/title1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Trending Now"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -32,13 +34,15 @@
 
                 android:id="@+id/rvList1"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Bollywood Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -47,13 +51,15 @@
 
                 android:id="@+id/rvList2"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Romantic Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -62,13 +68,15 @@
 
                 android:id="@+id/rvList3"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Hindi Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -77,13 +85,15 @@
 
                 android:id="@+id/rvList4"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Batman Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -92,13 +102,15 @@
 
                 android:id="@+id/rvList5"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Superman Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -107,13 +119,15 @@
 
                 android:id="@+id/rvList6"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Aquaman Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -122,13 +136,15 @@
 
                 android:id="@+id/rvList7"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Deadpool Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -137,13 +153,15 @@
 
                 android:id="@+id/rvList8"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Hollywood Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -152,13 +170,15 @@
 
                 android:id="@+id/rvList9"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Fast and furious"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -167,13 +187,15 @@
 
                 android:id="@+id/rvList10"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Harry Potter"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -182,13 +204,15 @@
 
                 android:id="@+id/rvList11"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Twilight"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -197,13 +221,15 @@
 
                 android:id="@+id/rvList12"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Mission Impossible"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -212,14 +238,16 @@
 
                 android:id="@+id/rvList13"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pirates of the Caribbean"
+                android:layout_marginTop="16dp"
+                android:text="Die Hard"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -227,13 +255,15 @@
 
                 android:id="@+id/rvList14"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Saw"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -242,13 +272,15 @@
 
                 android:id="@+id/rvList15"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Star Wars"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -257,13 +289,15 @@
 
                 android:id="@+id/rvList16"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Grudge"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -272,13 +306,15 @@
 
                 android:id="@+id/rvList17"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Jurassic Park"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -287,13 +323,15 @@
 
                 android:id="@+id/rvList18"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Indiana Jones"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -302,13 +340,15 @@
 
                 android:id="@+id/rvList19"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
             <TextView
 
                 android:id="@+id/title20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Ice Age"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -317,7 +357,8 @@
 
                 android:id="@+id/rvList20"
                 android:layout_width="match_parent"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp" />
 
 
         </LinearLayout>

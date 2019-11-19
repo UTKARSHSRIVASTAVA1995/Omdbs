@@ -119,7 +119,7 @@ public class MovieListFragment extends Fragment {
         getMovieList(11, "Harry Potter");
         getMovieList(12, "twilight");
         getMovieList(13, "mission impossible");
-        getMovieList(14, "Pirates of the Caribbean");
+        getMovieList(14, "Die Hard");
         getMovieList(15, "Saw");
         getMovieList(16, "Star Wars");
         getMovieList(17, "Grudge");
@@ -376,7 +376,7 @@ public class MovieListFragment extends Fragment {
         final LinearLayoutManager linearLayoutManager14 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         rvList14.setLayoutManager(linearLayoutManager14);
         movieRecyclerAdapter14 = new MovieRecyclerAdapter(getActivity(), movies14);
-        rvList11.setAdapter(movieRecyclerAdapter14);
+        rvList14.setAdapter(movieRecyclerAdapter14);
         movieRecyclerAdapter14.notifyDataSetChanged();
 
     }
