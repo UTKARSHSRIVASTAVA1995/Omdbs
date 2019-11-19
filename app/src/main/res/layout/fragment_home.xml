@@ -169,6 +169,156 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp" />
 
+            <TextView
+
+                android:id="@+id/title11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harry Potter"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList11"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Twilight"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList12"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mission Impossible"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList13"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pirates of the Caribbean"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList14"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saw"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList15"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Star Wars"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList16"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grudge"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList17"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jurassic Park"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList18"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Indiana Jones"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList19"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+
+                android:id="@+id/title20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ice Age"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvList20"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
 
         </LinearLayout>
 

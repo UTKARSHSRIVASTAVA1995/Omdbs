@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.omdbs.R;
+import com.example.omdbs.fragments.DownloadFragment;
 import com.example.omdbs.fragments.MovieListFragment;
 import com.example.omdbs.fragments.MyAccountFragment;
 import com.ss.bottomnavigation.BottomNavigation;
@@ -42,28 +43,33 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onSelectedItemChanged(int itemId) {
                 switch (itemId) {
+
                     case R.id.tab_home:
 
                         transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_fragment_containers, new MovieListFragment());
                         break;
+
                     case R.id.tab_downlaod:
 
                         transaction = getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
+                        transaction.replace(R.id.frame_fragment_containers, new DownloadFragment());
                         break;
+
                     case R.id.tab_account:
 
                         transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
                         break;
                 }
+
                 transaction.commit();
             }
         });
     }
 
     @Override
+
     public void onBackPressed() {
         super.onBackPressed();
 
@@ -79,6 +85,7 @@ public class DashboardActivity extends AppCompatActivity {
                 dialog.dismiss();
                 finish();
             }
+
         });
 
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
@@ -89,6 +96,7 @@ public class DashboardActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
         AlertDialog alert = builder.create();
         alert.show();
     }
