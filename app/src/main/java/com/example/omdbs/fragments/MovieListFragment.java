@@ -140,10 +140,8 @@ public class MovieListFragment extends Fragment {
 
                 if (response.isSuccessful()) {
 
-                    Log.d("movieearchRequestUrl", String.valueOf(call.request()));
-                    Log.d("MovieSearchResponsecode", String.valueOf(response.code()));
                     String apiResponse = response.body().toString();
-                    Log.d("apiResponse", apiResponse);
+
                 }
 
                 if (response.body() instanceof MovieSearchList) {
@@ -193,7 +191,6 @@ public class MovieListFragment extends Fragment {
                         } else if (count == 20) {
                             setMovie20(movieSearchList.getSearch());
                         }
-
                     } else {
 
                         Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
@@ -220,6 +217,7 @@ public class MovieListFragment extends Fragment {
         movieRecyclerAdapter1 = new MovieRecyclerAdapter(getActivity(), movies1);
         rvList1.setAdapter(movieRecyclerAdapter1);
         movieRecyclerAdapter1.notifyDataSetChanged();
+
     }
 
 
@@ -232,7 +230,6 @@ public class MovieListFragment extends Fragment {
         movieRecyclerAdapter2 = new MovieRecyclerAdapter(getActivity(), movies2);
         rvList2.setAdapter(movieRecyclerAdapter2);
         movieRecyclerAdapter2.notifyDataSetChanged();
-
 
     }
 
@@ -261,7 +258,6 @@ public class MovieListFragment extends Fragment {
         movieRecyclerAdapter4.notifyDataSetChanged();
 
     }
-
 
     private void setMovie5(List<MovieSearchList.Search> movieSearchList) {
 

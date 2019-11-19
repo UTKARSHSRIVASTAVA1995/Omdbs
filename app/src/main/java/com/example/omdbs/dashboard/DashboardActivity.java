@@ -31,9 +31,7 @@ public class DashboardActivity extends AppCompatActivity {
         initViews();
     }
 
-
     private void initViews() {
-
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
         frame_fragment_containers = findViewById(R.id.frame_fragment_containers);
@@ -64,7 +62,6 @@ public class DashboardActivity extends AppCompatActivity {
                 }
 
                 transaction.commit();
-
             }
         });
     }
@@ -72,6 +69,7 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
 
     public void onBackPressed() {
+
         super.onBackPressed();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -86,7 +84,6 @@ public class DashboardActivity extends AppCompatActivity {
                 dialog.dismiss();
                 finish();
             }
-
         });
 
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {

@@ -1,13 +1,14 @@
 package com.example.omdbs.fragments;
 
-import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
 
 import com.example.omdbs.R;
+
 public class DownloadFragment extends Fragment {
 
 
