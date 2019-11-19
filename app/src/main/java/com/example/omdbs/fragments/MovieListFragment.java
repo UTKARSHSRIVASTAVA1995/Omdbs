@@ -192,7 +192,6 @@ public class MovieListFragment extends Fragment {
                             setMovie20(movieSearchList.getSearch());
                         }
                     } else {
-
                         Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -201,7 +200,6 @@ public class MovieListFragment extends Fragment {
             @Override
             public void onFailure(Call<MovieSearchList> call, Throwable t) {
                 Log.e("Failure", "Failure : " + t.getMessage());
-
             }
         });
 
@@ -246,7 +244,6 @@ public class MovieListFragment extends Fragment {
 
     }
 
-
     private void setMovie4(List<MovieSearchList.Search> movieSearchList) {
 
         movies4.clear();
@@ -269,6 +266,7 @@ public class MovieListFragment extends Fragment {
         rvList5.setAdapter(movieRecyclerAdapter5);
         movieRecyclerAdapter5.notifyDataSetChanged();
         title5.setText("Deadpool Movies (" + (movies5.size()) + ")");
+
     }
 
     private void setMovie6(List<MovieSearchList.Search> movieSearchList) {

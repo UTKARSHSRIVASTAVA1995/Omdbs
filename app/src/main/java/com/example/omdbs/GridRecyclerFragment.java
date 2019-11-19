@@ -95,7 +95,6 @@ public class GridRecyclerFragment extends Fragment {
                         if (mOnLoadMoreListener != null) {
                             mOnLoadMoreListener.onLoadMore();
                         }
-
                         isLoading = true;
                     }
                 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Omdbs</string>
+    <string name="app_name">OMDB</string>
     <string name="text_accounts">All Accounts</string>
     <string name="hint_name">Name</string>
     <string name="company_organization">Company Organization</string>
