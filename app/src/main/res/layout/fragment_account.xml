@@ -7,14 +7,17 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="#000">
+
 
 
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+
         android:padding="16dp">
 
         <LinearLayout
@@ -54,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="@string/credit_card"
+                android:text="@string/company_organization"
                 android:textColor="@color/colorTextHint" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -63,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Credit Card"
+                android:text="Company Organization"
                 android:textColor="@android:color/darker_gray" />
 
         </LinearLayout>
@@ -119,7 +122,9 @@
                 android:textColor="@android:color/darker_gray"/>
 
         </LinearLayout>
-
     </LinearLayout>
+
+
+
 
 </androidx.cardview.widget.CardView>

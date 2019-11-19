@@ -64,6 +64,7 @@ public class DashboardActivity extends AppCompatActivity {
                 }
 
                 transaction.commit();
+
             }
         });
     }
