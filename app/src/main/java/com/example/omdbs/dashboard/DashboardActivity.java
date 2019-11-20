@@ -1,6 +1,7 @@
 package com.example.omdbs.dashboard;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -58,6 +59,14 @@ public class DashboardActivity extends AppCompatActivity {
 
                         transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
+
+                        Intent intent = getIntent();
+                        Bundle b = new Bundle();
+                        String name = (String) b.get("name");
+                        String email = (String) b.get("email");
+                        String password = (String) b.get("email");
+                        String company = (String) b.get("email");
+                        startActivity(intent);
                         break;
                 }
 

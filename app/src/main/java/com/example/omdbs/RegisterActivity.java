@@ -118,7 +118,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return;
 
-
         }
 
         if (!databaseHelper.checkUsers(textInputEditTextEmail.getText().toString().trim())) {
@@ -143,6 +142,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             startActivity(new Intent(RegisterActivity.this, DashboardActivity.class));
 
         } else {
+
             Toast.makeText(RegisterActivity.this, "Registration not SuccessFull", Toast.LENGTH_LONG).show();
         }
     }
