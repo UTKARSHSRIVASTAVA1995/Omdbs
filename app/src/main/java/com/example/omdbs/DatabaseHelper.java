@@ -48,6 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void addUser(User user) {
+
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_USER_NAME, user.getName());
@@ -59,6 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<User> getAllUser() {
+
         String[] columns = {COLUMN_USER_ID, COLUMN_USER_EMAIL, COLUMN_USER_NAME, COLUMN_USER_PASSWORD, COLUMN_USER_CREDIT_CARD};
         String sortOrder = COLUMN_USER_NAME + " ASC";
         ArrayList<User> userList = new ArrayList<User>();
@@ -68,6 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
 
             do {
+
                 User user = new User();
                 user.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ID))));
                 user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_USER_NAME)));
@@ -75,7 +78,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PASSWORD)));
                 user.setCompanyOrganization(cursor.getString(cursor.getColumnIndex(COLUMN_USER_CREDIT_CARD)));
                 userList.add(user);
+
             }
+
             while (cursor.moveToNext());
         }
 

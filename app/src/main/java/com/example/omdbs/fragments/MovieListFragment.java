@@ -28,9 +28,8 @@ import retrofit2.Response;
 public class MovieListFragment extends Fragment {
 
     private RecyclerView rvList1, rvList2, rvList3, rvList4, rvList5, rvList6, rvList7, rvList8, rvList9, rvList10, rvList11, rvList12, rvList13, rvList14, rvList15, rvList16, rvList17, rvList18, rvList19, rvList20;
-    private TextView title1, title2, title3, title4, title5, title6, title7, title8, title9, title10;
     private MovieRecyclerAdapter movieRecyclerAdapter1, movieRecyclerAdapter2, movieRecyclerAdapter3, movieRecyclerAdapter4, movieRecyclerAdapter5, movieRecyclerAdapter6, movieRecyclerAdapter7, movieRecyclerAdapter8, movieRecyclerAdapter9, movieRecyclerAdapter10, movieRecyclerAdapter11, movieRecyclerAdapter12, movieRecyclerAdapter13, movieRecyclerAdapter14, movieRecyclerAdapter15, movieRecyclerAdapter16, movieRecyclerAdapter17, movieRecyclerAdapter18, movieRecyclerAdapter19, movieRecyclerAdapter20;
-
+    private TextView title1, title2, title3, title4, title5, title6, title7, title8, title9, title10;
     private List<MovieSearchList.Search> movies1 = new ArrayList<>();
     private List<MovieSearchList.Search> movies2 = new ArrayList<>();
     private List<MovieSearchList.Search> movies3 = new ArrayList<>();
@@ -52,6 +51,7 @@ public class MovieListFragment extends Fragment {
     private List<MovieSearchList.Search> movies19 = new ArrayList<>();
     private List<MovieSearchList.Search> movies20 = new ArrayList<>();
     private Integer movieApiCount = 1;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -126,6 +126,7 @@ public class MovieListFragment extends Fragment {
         getMovieList(18, "Jurassic Park");
         getMovieList(19, "Indiana Jones");
         getMovieList(20, "Ice Age");
+
     }
 
 
@@ -141,7 +142,6 @@ public class MovieListFragment extends Fragment {
                 if (response.isSuccessful()) {
 
                     String apiResponse = response.body().toString();
-
                 }
 
                 if (response.body() instanceof MovieSearchList) {
@@ -202,7 +202,6 @@ public class MovieListFragment extends Fragment {
                 Log.e("Failure", "Failure : " + t.getMessage());
             }
         });
-
     }
 
     private void setMovie1(List<MovieSearchList.Search> movieSearchList) {
@@ -437,7 +436,6 @@ public class MovieListFragment extends Fragment {
     }
 
     private void setMovie20(List<MovieSearchList.Search> movieSearchList) {
-
         movies20.clear();
         movies20 = movieSearchList;
         final LinearLayoutManager linearLayoutManager20 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);

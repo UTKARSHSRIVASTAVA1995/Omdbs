@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,10 +30,11 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     public void setOrientation(int orientation) {
+
         if (orientation != HORIZONTAL_LIST && orientation != VERTICAL_LIST) {
             throw new IllegalArgumentException("invalid orientation");
         }
-        
+
         mOrientation = orientation;
     }
 

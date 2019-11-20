@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:tab_icon="@drawable/ic_home"
+            app:tab_icon="@drawable/ic_home_black_24dp"
             app:tab_text="Home" />
 
         <com.ss.bottomnavigation.TabItem
@@ -38,7 +38,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:tab_icon="@drawable/ic_account"
+            app:tab_icon="@drawable/ic_supervisor_account_black_24dp"
             app:tab_text="My Account" />
 
     </com.ss.bottomnavigation.BottomNavigation>
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation"
-        android:visibility="gone">
+        android:visibility="gone" >
 
         <LinearLayout
 

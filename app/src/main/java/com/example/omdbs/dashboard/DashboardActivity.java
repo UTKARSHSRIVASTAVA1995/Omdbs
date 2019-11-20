@@ -70,7 +70,6 @@ public class DashboardActivity extends AppCompatActivity {
 
     public void onBackPressed() {
 
-        super.onBackPressed();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 

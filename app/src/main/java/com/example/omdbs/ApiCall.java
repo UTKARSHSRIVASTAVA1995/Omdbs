@@ -15,9 +15,9 @@ public interface ApiCall {
     Call<MovieSearchList> search(@Query("apikey") String apikey, @Query("t") String query, @Query("type") String type, @Query("page") int page);
 
     @Headers("Content-Type: application/json")
+
     @GET("/")
     Call<MovieSearchList> searchMovie(@Query("apikey") String apikey, @Query("s") String query, @Query("page") String page);
-
 
     @GET("/")
     Call<MovieModel> getMovie(@Query("i") String omdbId);
@@ -38,6 +38,4 @@ public interface ApiCall {
             }
         }
     }
-
-
 }

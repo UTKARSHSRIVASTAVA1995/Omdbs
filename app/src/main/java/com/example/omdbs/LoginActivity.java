@@ -76,6 +76,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.textViewLinkRegister:
                 Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intentRegister);
+
                 break;
         }
     }
@@ -94,7 +95,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password1))) {
             return;
         }
-
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
 
             SharedPreferences.Editor editor = getSharedPreferences("datasaving", MODE_PRIVATE).edit();
