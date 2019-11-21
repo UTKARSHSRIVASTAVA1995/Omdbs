@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     private final AppCompatActivity activity = LoginActivity.this;
-
+    private TextInputLayout textInputLayoutName;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
     private TextInputEditText textInputEditTextEmail;
@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void initViews() {
 
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
+        textInputLayoutName = findViewById(R.id.textInputEditTextName);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
         textInputEditTextEmail = findViewById(R.id.textInputEditTextEmail);
         textInputEditTextPassword = findViewById(R.id.textInputEditTextPassword);
@@ -76,12 +77,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.textViewLinkRegister:
                 Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intentRegister);
-
                 break;
         }
     }
 
     private void verifyFromSQLite() {
+
 
         if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
@@ -105,8 +106,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             //emptyInputEditText();
             startActivity(accountsIntent);
-
         } else {
+            
         }
     }
 }

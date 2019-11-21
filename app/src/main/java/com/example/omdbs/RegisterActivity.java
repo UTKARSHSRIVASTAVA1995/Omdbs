@@ -11,14 +11,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.omdbs.dashboard.DashboardActivity;
-import com.example.omdbs.fragments.MyAccountFragment;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final AppCompatActivity activity = RegisterActivity.this;
-
 
     private TextInputLayout textInputLayoutName;
     private TextInputLayout textInputLayoutCompanyOrganization;
@@ -45,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         initViews();
         initListeners();
         initObjects();
+
     }
 
     private void initObjects() {
@@ -117,7 +116,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return;
-
         }
 
         if (!databaseHelper.checkUsers(textInputEditTextEmail.getText().toString().trim())) {
@@ -126,12 +124,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
             user.setCompanyOrganization(textInputEditTextCompanyOrganization.getText().toString().trim());
             databaseHelper.addUser(user);
-
-            Intent intent = new Intent(RegisterActivity.this, MyAccountFragment.class);
-            intent.putExtra("name",textInputEditTextName.getText().toString());
-            intent.putExtra("email",textInputEditTextEmail.getText().toString());
-            intent.putExtra("password",textInputEditTextPassword.getText().toString());
-            intent.putExtra("company",textInputEditTextCompanyOrganization.getText().toString());
+            Bundle b1 = new Bundle();
+            b1.putString("name", textInputEditTextName.getText().toString());
+            b1.putString("email", textInputEditTextEmail.getText().toString());
+            b1.putString("password", textInputEditTextPassword.getText().toString());
+            b1.putString("company", textInputEditTextCompanyOrganization.getText().toString());
 
 
             SharedPreferences.Editor editor = getSharedPreferences("datasaving", MODE_PRIVATE).edit();

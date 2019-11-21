@@ -12,6 +12,7 @@ import com.example.omdbs.R;
 
 public class MyAccountFragment extends Fragment {
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,8 @@ public class MyAccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        View v = inflater.inflate(R.layout.fragment_account, container, false);
+        return v;
 
     }
 

@@ -61,6 +61,7 @@ public class MovieListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_home, container, false);
 
     }
@@ -129,7 +130,6 @@ public class MovieListFragment extends Fragment {
 
     }
 
-
     private void getMovieList(final int movieApiCount, final String query) {
 
         ApiCall.Factory.getInstance().searchMovie("a4f7d196", query, "1").enqueue(new Callback<MovieSearchList>() {
@@ -191,7 +191,9 @@ public class MovieListFragment extends Fragment {
                         } else if (count == 20) {
                             setMovie20(movieSearchList.getSearch());
                         }
+
                     } else {
+
                         Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -200,6 +202,7 @@ public class MovieListFragment extends Fragment {
             @Override
             public void onFailure(Call<MovieSearchList> call, Throwable t) {
                 Log.e("Failure", "Failure : " + t.getMessage());
+
             }
         });
     }

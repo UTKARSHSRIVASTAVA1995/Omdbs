@@ -1,5 +1,6 @@
 package com.example.omdbs.fragments;
 
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,14 @@ import androidx.fragment.app.Fragment;
 
 import com.example.omdbs.R;
 
+
 public class DownloadFragment extends Fragment {
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override

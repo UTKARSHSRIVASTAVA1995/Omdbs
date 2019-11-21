@@ -1,69 +1,63 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#000"
     android:padding="16dp">
 
     <ImageView
 
-        android:id="@+id/sheet_poster"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
+        android:id="@+id/movie_poster"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true" />
 
     <TextView
 
-        android:id="@+id/sheet_title"
+        android:id="@+id/movie_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="6dp"
-        android:layout_toRightOf="@id/sheet_poster"
-        android:gravity="start"
+        android:layout_below="@+id/movie_poster"
+        android:layout_marginTop="50dp"
         android:text="Title"
-        android:textColor="#000000"
+        android:textColor="#fff"
         android:textSize="20sp" />
 
     <TextView
 
-        android:id="@+id/sheet_release"
+        android:id="@+id/movie_release"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/sheet_title"
-        android:layout_below="@id/sheet_title"
+        android:layout_below="@id/movie_title"
+        android:layout_alignLeft="@id/movie_title"
         android:layout_marginTop="6dp"
         android:gravity="start"
         android:text="Release"
-        android:textColor="#2A2C43"
-        android:textSize="14sp" />
+        android:textColor="#fff"
+        android:textSize="20sp" />
 
     <TextView
 
-        android:id="@+id/sheet_time"
+        android:id="@+id/movie_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/sheet_title"
-        android:layout_below="@id/sheet_release"
+        android:layout_below="@id/movie_release"
+        android:layout_alignLeft="@id/movie_title"
         android:layout_marginTop="6dp"
         android:gravity="start"
         android:text="Time"
-        android:textColor="#2A2C43"
-        android:textSize="14sp" />
+        android:textColor="#fff"
+        android:textSize="20sp" />
 
     <TextView
 
-        android:id="@+id/sheet_description"
+        android:id="@+id/movie_description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/sheet_title"
-        android:layout_below="@id/sheet_time"
+        android:layout_height="match_parent"
+        android:layout_below="@id/movie_time"
+        android:layout_alignLeft="@id/movie_title"
         android:layout_marginTop="6dp"
-        android:gravity="start"
         android:text="Description"
-        android:visibility="gone"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        android:textColor="#fff"
+        android:textSize="20sp" />
 
 </RelativeLayout>

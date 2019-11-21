@@ -36,7 +36,7 @@
                 android:id="@+id/rvList1"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"/>
 
             <TextView
 
@@ -367,7 +367,6 @@
                 android:id="@+id/title20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
                 android:layout_marginTop="16dp"
                 android:text="Ice Age"
                 android:textColor="@android:color/white"

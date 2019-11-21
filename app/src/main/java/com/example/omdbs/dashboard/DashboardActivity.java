@@ -1,9 +1,10 @@
 package com.example.omdbs.dashboard;
 
 import android.content.DialogInterface;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.widget.FrameLayout;
+
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,7 @@ public class DashboardActivity extends AppCompatActivity {
 
             @Override
             public void onSelectedItemChanged(int itemId) {
+
                 switch (itemId) {
 
                     case R.id.tab_home:
@@ -56,18 +58,10 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
 
                     case R.id.tab_account:
-
                         transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
-
-                        Intent intent = getIntent();
-                        Bundle b = new Bundle();
-                        String name = (String) b.get("name");
-                        String email = (String) b.get("email");
-                        String password = (String) b.get("email");
-                        String company = (String) b.get("email");
-                        startActivity(intent);
                         break;
+
                 }
 
                 transaction.commit();
