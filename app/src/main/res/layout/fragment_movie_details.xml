@@ -1,8 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-    android:padding="16dp">
+    android:padding="20dp">
 
     <ImageView
 
@@ -24,12 +26,12 @@
 
     <TextView
 
-        android:id="@+id/movie_release"
+        android:id="@+id/movie_releaseDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/movie_title"
         android:layout_alignLeft="@id/movie_title"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:gravity="start"
         android:text="Release"
         android:textColor="#fff"
@@ -40,9 +42,9 @@
         android:id="@+id/movie_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/movie_release"
+        android:layout_below="@id/movie_releaseDate"
         android:layout_alignLeft="@id/movie_title"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:gravity="start"
         android:text="Time"
         android:textColor="#fff"
@@ -55,7 +57,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/movie_time"
         android:layout_alignLeft="@id/movie_title"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:text="Description"
         android:textColor="#fff"
         android:textSize="20sp" />
