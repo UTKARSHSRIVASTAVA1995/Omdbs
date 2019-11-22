@@ -141,12 +141,14 @@ public class MovieListFragment extends Fragment {
                 if (response.isSuccessful()) {
 
                     String apiResponse = response.body().toString();
+
                 }
 
                 if (response.body() instanceof MovieSearchList) {
                     MovieSearchList movieSearchList = response.body();
 
                     if (movieSearchList.getResponse().equals("True")) {
+
 
                         int count = movieApiCount;
 

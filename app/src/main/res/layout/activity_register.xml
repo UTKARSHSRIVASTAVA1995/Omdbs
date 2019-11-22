@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="vertical"
-        android:paddingLeft="15dp">
+        android:paddingLeft="20dp">
 
         <TextView
 
@@ -46,26 +46,58 @@
         android:textSize="17dp"
         android:textStyle="bold" />
 
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/textInputLayoutName"
+    <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
 
-            android:id="@+id/textInputEditTextName"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/textInputLayoutName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:hint="First Name"
-            android:inputType="text"
-            android:maxLines="1" />
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/textInputEditTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="First Name"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/textInputLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/textInputEditTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </TableRow>
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -176,7 +208,7 @@
         <TextView
             android:id="@+id/appCompatTextViewLoginLink"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Already have an account? Login"
             android:textColor="#0F0F0F"

@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //emptyInputEditText();
             startActivity(accountsIntent);
         } else {
-            
+
         }
     }
 }

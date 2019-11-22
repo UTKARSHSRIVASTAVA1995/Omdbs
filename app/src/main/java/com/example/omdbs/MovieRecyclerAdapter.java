@@ -29,8 +29,8 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
     @Override
 
     public MovieViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movies, parent, false);
 
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movies, parent, false);
 
         return new MovieViewHolder(itemView);
 
@@ -38,6 +38,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
 
     @Override
     public void onBindViewHolder(MovieViewHolder holder, final int position) {
+
         MovieSearchList.Search movie = moviesList.get(position);
         holder.title.setText(movie.getTitle());
         Glide.with(context)
@@ -46,6 +47,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
