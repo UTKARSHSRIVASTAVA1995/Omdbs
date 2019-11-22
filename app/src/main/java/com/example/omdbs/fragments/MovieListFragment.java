@@ -25,7 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MovieListFragment extends Fragment   {
+public class MovieListFragment extends Fragment {
 
     private RecyclerView rvList1, rvList2, rvList3, rvList4, rvList5, rvList6, rvList7, rvList8, rvList9, rvList10, rvList11, rvList12, rvList13, rvList14, rvList15, rvList16, rvList17, rvList18, rvList19, rvList20;
     private MovieRecyclerAdapter movieRecyclerAdapter1, movieRecyclerAdapter2, movieRecyclerAdapter3, movieRecyclerAdapter4, movieRecyclerAdapter5, movieRecyclerAdapter6, movieRecyclerAdapter7, movieRecyclerAdapter8, movieRecyclerAdapter9, movieRecyclerAdapter10, movieRecyclerAdapter11, movieRecyclerAdapter12, movieRecyclerAdapter13, movieRecyclerAdapter14, movieRecyclerAdapter15, movieRecyclerAdapter16, movieRecyclerAdapter17, movieRecyclerAdapter18, movieRecyclerAdapter19, movieRecyclerAdapter20;
@@ -127,7 +127,6 @@ public class MovieListFragment extends Fragment   {
         getMovieList(18, "Jurassic Park");
         getMovieList(19, "Indiana Jones");
         getMovieList(20, "Ice Age");
-
     }
 
     private void getMovieList(final int movieApiCount, final String query) {
@@ -146,6 +145,7 @@ public class MovieListFragment extends Fragment   {
 
                 if (response.body() instanceof MovieSearchList) {
                     MovieSearchList movieSearchList = response.body();
+
                     if (movieSearchList.getResponse().equals("True")) {
 
                         int count = movieApiCount;

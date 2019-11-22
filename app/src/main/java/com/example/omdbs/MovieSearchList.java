@@ -41,6 +41,7 @@ public class MovieSearchList {
     public void setResponse(String response) {
         this.response = response;
     }
+
     public class Search {
 
         @SerializedName("Title")

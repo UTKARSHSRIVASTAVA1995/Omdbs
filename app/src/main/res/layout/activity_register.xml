@@ -3,8 +3,8 @@
     android:id="@+id/linearlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
 
     <LinearLayout
 
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="vertical"
-        android:paddingLeft="20dp">
+        android:paddingLeft="15dp">
 
         <TextView
 
@@ -176,7 +176,7 @@
         <TextView
             android:id="@+id/appCompatTextViewLoginLink"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:text="Already have an account? Login"
             android:textColor="#0F0F0F"

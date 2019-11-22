@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         loggedIn = prefs.getString("loggedIn", "");
 
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 

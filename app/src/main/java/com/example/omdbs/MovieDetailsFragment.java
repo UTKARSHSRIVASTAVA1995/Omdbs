@@ -1,39 +1,30 @@
 package com.example.omdbs;
 
-import android.app.Dialog;
-import android.view.View;
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.squareup.picasso.Picasso;
 
-public class MovieDetailsFragment extends BottomSheetDialogFragment {
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class MovieDetailsFragment extends AppCompatActivity {
 
     private TextView title, release, time, description;
     private ImageView poster;
 
-    public MovieDetailsFragment() {
-
-    }
 
     @Override
-    public void setupDialog(final Dialog dialog, int style) {
-        super.setupDialog(dialog, style);
-        View contentView = View.inflate(getContext(), R.layout.fragment_movie_details, null);
+    protected void onCreate(Bundle savedInstanceState) {
 
-        poster = contentView.findViewById(R.id.movie_poster);
-        title =  contentView.findViewById(R.id.movie_title);
-        release =  contentView.findViewById(R.id.movie_releaseDate);
-        time =  contentView.findViewById(R.id.movie_time);
-        description =  contentView.findViewById(R.id.movie_description);
-
-        Picasso.with(getContext()).load(getArguments().getString("poster")).fit().into(poster);
-        title.setText(getArguments().getString("title"));
-        release.setText(getArguments().getString("release"));
-        time.setText(getArguments().getString("time"));
-        description.setText(getArguments().getString("description"));
-        dialog.setContentView(contentView);
+        setContentView(R.layout.fragment_movie_details);
+        super.onCreate(savedInstanceState);
+        poster = findViewById(R.id.movie_poster);
+        title = findViewById(R.id.movie_title);
+        release = findViewById(R.id.movie_releaseDate);
+        time = findViewById(R.id.movie_time);
+        description = findViewById(R.id.movie_description);
     }
 }
+
 

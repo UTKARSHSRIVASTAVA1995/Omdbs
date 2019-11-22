@@ -10,6 +10,7 @@
         android:layout_width="190dp"
         android:layout_height="220dp">
 
+
     <ImageView
         android:id="@+id/poster"
         android:layout_width="80dp"
@@ -17,17 +18,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" />
 
-    <TextView
+        <TextView
 
-        android:visibility="gone"
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/poster"
-        android:paddingLeft="5dp"
-        android:textColor="@android:color/white"
-        android:textSize="12sp" />
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
 
     </FrameLayout>
+
 </LinearLayout>

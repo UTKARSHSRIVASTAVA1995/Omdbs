@@ -42,6 +42,7 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
     }
 
     @Override
+
     public void onTouchEvent(RecyclerView recyclerView, MotionEvent event) {
 
     }

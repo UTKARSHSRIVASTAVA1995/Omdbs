@@ -1,3 +1,4 @@
+/*
 package com.example.omdbs;
 
 import android.content.Context;
@@ -154,10 +155,10 @@ public class GridRecyclerFragment extends Fragment {
                 }
             });
 
-            movieGridRecycler1.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler1) {
+          movieGridRecycler1.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler1) {
 
-                @Override
-                public boolean onClick(RecyclerView parent, View view, int position, long id) {
+               @Override
+               public boolean onClick(RecyclerView parent, View view, int position, long id) {
                     BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
                     Bundle bundle = new Bundle();
                     MovieSearchList.Search movie = movies.get(position);
@@ -172,79 +173,79 @@ public class GridRecyclerFragment extends Fragment {
 
                 }
 
-                @Override
-                public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
-                    return false;
-                }
+            @Override
+            public boolean onLongClick (RecyclerView parent, View view,int position, long id){
+                return false;
+            }
 
-                @Override
-                public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+            @Override
+            public void onRequestDisallowInterceptTouchEvent ( boolean disallowIntercept){
 
-                }
-            });
+            }
+        });
 
-            movieGridRecycler2.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler2) {
+        movieGridRecycler2.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler2) {
 
-                @Override
-                public boolean onClick(RecyclerView parent, View view, int position, long id) {
-                    BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
-                    Bundle bundle = new Bundle();
-                    MovieSearchList.Search movie = movies.get(position);
-                    bundle.putString("title", movie.getTitle());
-                    bundle.putString("release", movie.getType());
-                    bundle.putString("time", movie.getYear());
-                    bundle.putString("description", movie.getYear());
-                    bundle.putString("poster", movie.getPoster());
-                    bottomSheetDialogFragment.setArguments(bundle);
-                    bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
-                    return true;
-                }
+            @Override
+            public boolean onClick(RecyclerView parent, View view, int position, long id) {
+                BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
+                Bundle bundle = new Bundle();
+                MovieSearchList.Search movie = movies.get(position);
+                bundle.putString("title", movie.getTitle());
+                bundle.putString("release", movie.getType());
+                bundle.putString("time", movie.getYear());
+                bundle.putString("description", movie.getYear());
+                bundle.putString("poster", movie.getPoster());
+                bottomSheetDialogFragment.setArguments(bundle);
+                bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+                return true;
+            }
 
-                @Override
-                public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
-                    return false;
-                }
+            @Override
+            public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
+                return false;
+            }
 
-                @Override
-                public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
 
-                }
-            });
+            }
+        });
 
-            movieGridRecycler3.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler3) {
-                @Override
-                public boolean onClick(RecyclerView parent, View view, int position, long id) {
-                    BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
-                    Bundle bundle = new Bundle();
-                    MovieSearchList.Search movie = movies.get(position);
-                    bundle.putString("title", movie.getTitle());
-                    bundle.putString("release", movie.getType());
-                    bundle.putString("time", movie.getYear());
-                    bundle.putString("description", movie.getYear());
-                    bundle.putString("poster", movie.getPoster());
-                    bottomSheetDialogFragment.setArguments(bundle);
-                    bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
-                    return true;
-                }
+        movieGridRecycler3.addOnItemTouchListener(new ItemTouchListener(movieGridRecycler3) {
+            @Override
+            public boolean onClick(RecyclerView parent, View view, int position, long id) {
+                BottomSheetDialogFragment bottomSheetDialogFragment = new MovieDetailsFragment();
+                Bundle bundle = new Bundle();
+                MovieSearchList.Search movie = movies.get(position);
+                bundle.putString("title", movie.getTitle());
+                bundle.putString("release", movie.getType());
+                bundle.putString("time", movie.getYear());
+                bundle.putString("description", movie.getYear());
+                bundle.putString("poster", movie.getPoster());
+                bottomSheetDialogFragment.setArguments(bundle);
+                bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+                return true;
+            }
 
-                @Override
-                public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
-                    return false;
-                }
+            @Override
+            public boolean onLongClick(RecyclerView parent, View view, int position, long id) {
+                return false;
+            }
 
-                @Override
-                public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
 
-                }
-            });
+            }
+        });
 
-        }
+    }
 
         movieGridRecycler1.setVisibility(View.GONE);
         movieGridRecycler2.setVisibility(View.GONE);
         movieGridRecycler3.setVisibility(View.GONE);
         message.setVisibility(View.VISIBLE);
-    }
+}
 
     private int dpToPx(int dp) {
         Resources r = getResources();
@@ -256,3 +257,4 @@ public class GridRecyclerFragment extends Fragment {
     }
 
 }
+*/

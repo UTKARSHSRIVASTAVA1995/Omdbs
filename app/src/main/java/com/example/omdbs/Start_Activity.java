@@ -1,3 +1,4 @@
+/*
 package com.example.omdbs;
 
 import android.app.ProgressDialog;
@@ -222,6 +223,7 @@ public class Start_Activity extends AppCompatActivity {
 
 
 
+*/
 /*    public void getMovies(MovieSearchList movieSearchList) {
         final int[] count = {0};
        for (int i = 0; i < searchResult.getSearch().size(); i++) {
@@ -243,7 +245,8 @@ public class Start_Activity extends AppCompatActivity {
                 }
             });
         }
-    }*/
+    }*//*
+
 
     private void isDataFetchComplete(int count) {
         if (searchResult.getResponse().equals("True") && count == searchResult.getSearch().size()) {
@@ -308,3 +311,4 @@ public class Start_Activity extends AppCompatActivity {
         }
     }
 }
+*/
