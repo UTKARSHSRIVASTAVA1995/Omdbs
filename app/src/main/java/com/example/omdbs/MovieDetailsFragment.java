@@ -22,11 +22,11 @@ public class MovieDetailsFragment extends BottomSheetDialogFragment {
         super.setupDialog(dialog, style);
         View contentView = View.inflate(getContext(), R.layout.fragment_movie_details, null);
 
-        poster = contentView.findViewById(R.id.sheet_poster);
-        title =  contentView.findViewById(R.id.sheet_title);
-        release =  contentView.findViewById(R.id.sheet_release);
-        time =  contentView.findViewById(R.id.sheet_time);
-        description =  contentView.findViewById(R.id.sheet_description);
+        poster = contentView.findViewById(R.id.movie_poster);
+        title =  contentView.findViewById(R.id.movie_title);
+        release =  contentView.findViewById(R.id.movie_releaseDate);
+        time =  contentView.findViewById(R.id.movie_time);
+        description =  contentView.findViewById(R.id.movie_description);
 
         Picasso.with(getContext()).load(getArguments().getString("poster")).fit().into(poster);
         title.setText(getArguments().getString("title"));

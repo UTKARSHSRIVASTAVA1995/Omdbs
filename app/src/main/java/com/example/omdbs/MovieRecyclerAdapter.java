@@ -23,6 +23,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
         this.context = context;
         this.moviesList = moviesList;
 
+
     }
 
     @Override
@@ -37,7 +38,6 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         MovieSearchList.Search movie = moviesList.get(position);
         holder.title.setText(movie.getTitle());
-        //Picasso.with(context).load(movie.getPoster()).fit().into(holder.poster);
         Glide.with(context)
                 .load(movie.getPoster())
                 .into(holder.poster);
@@ -53,6 +53,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
 
         public TextView title;
         public ImageView poster;
+
 
 
         public MovieViewHolder(View view) {

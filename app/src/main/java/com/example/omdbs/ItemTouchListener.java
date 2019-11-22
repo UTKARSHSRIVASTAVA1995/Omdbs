@@ -14,9 +14,9 @@ public abstract class ItemTouchListener implements RecyclerView.OnItemTouchListe
 
     private GestureDetector mGestureDetector;
 
-   public ItemTouchListener(RecyclerView hostView) {
+    public ItemTouchListener(RecyclerView hostView) {
         //mGestureDetector = new ItemClickGestureDetector(hostView.getContext(),
-                //new ItemClickGestureListener(hostView));
+        //new ItemClickGestureListener(hostView));
     }
 
     private boolean isAttachedToWindow(RecyclerView hostView) {
