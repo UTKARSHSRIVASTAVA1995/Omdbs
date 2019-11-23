@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.omdbs.models.SingleMovieDetail;
 
-import java.util.logging.Logger;
 
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -42,7 +41,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
 
     }
 
-    /**/
+
     public void initWidgets()
     {
         poster = findViewById(R.id.movie_poster);
@@ -52,7 +51,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
         description = findViewById(R.id.movie_description);
     }
 
-    /**/
+
     private  void setMovieDetails(final SingleMovieDetail singleMovieDetail){
 
 
@@ -61,7 +60,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
             finish();
         }
 
-        /*Setting movie title*/
+
         if(null == singleMovieDetail.getTitle() || TextUtils.isEmpty(singleMovieDetail.getTitle())){
 
             title.setText("Title -");
@@ -70,7 +69,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
         }
 
 
-        /*Setting movie Release*/
+
         if(null == singleMovieDetail.getReleased() || TextUtils.isEmpty(singleMovieDetail.getReleased())){
 
             release.setText("Release -");
@@ -78,7 +77,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
             release.setText("Release - "+singleMovieDetail.getReleased());
         }
 
-        /*Setting movie poster*/
+
         if(null != singleMovieDetail.getPoster() && !TextUtils.isEmpty(singleMovieDetail.getPoster())){
 
             Glide.with(MovieDetailsFragment.this)
@@ -86,7 +85,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
                     .into(poster);
         }
 
-        /*Setting movie year*/
+
         if(null == singleMovieDetail.getYear() || TextUtils.isEmpty(singleMovieDetail.getYear())){
 
             time.setText("Year -");
@@ -95,7 +94,7 @@ public class MovieDetailsFragment extends AppCompatActivity {
         }
 
 
-        /*Setting movie director name*/
+
         if(null == singleMovieDetail.getDirector() || TextUtils.isEmpty(singleMovieDetail.getDirector())){
 
             description.setText("Director -");
@@ -122,7 +121,6 @@ public class MovieDetailsFragment extends AppCompatActivity {
 
                 if (response.body() instanceof SingleMovieDetail) {
                     SingleMovieDetail singleMovieDetail = response.body();
-                    /*Log.d("apiResponsett", movieSearchList.toString());*/
 
                     if (singleMovieDetail.getResponse().equals("True")) {
 

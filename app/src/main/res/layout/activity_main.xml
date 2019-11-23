@@ -36,12 +36,12 @@
 
         <ImageView
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="288dp"
             android:layout_below="@+id/tv2"
             android:layout_centerInParent="true"
             android:layout_marginTop="38dp"
-            android:src="@drawable/splash" />
+            android:src="@drawable/land"/>
 
     </LinearLayout>
 

@@ -145,7 +145,7 @@ public class MovieListFragment extends Fragment {
 
                 if (response.body() instanceof MovieSearchList) {
                     MovieSearchList movieSearchList = response.body();
-                    /*Log.d("apiResponsett", movieSearchList.toString());*/
+
 
                     if (movieSearchList.getResponse().equals("True")) {
 
