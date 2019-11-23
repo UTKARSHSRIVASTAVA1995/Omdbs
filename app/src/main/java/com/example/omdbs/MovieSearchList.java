@@ -3,9 +3,10 @@ package com.example.omdbs;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MovieSearchList {
+public class MovieSearchList implements Serializable {
 
 
     @SerializedName("Search")
@@ -42,7 +43,7 @@ public class MovieSearchList {
         this.response = response;
     }
 
-    public class Search {
+    public class Search implements Serializable {
 
         @SerializedName("Title")
         @Expose

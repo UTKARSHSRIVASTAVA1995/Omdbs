@@ -28,6 +28,9 @@
     <activity android:name=".RegisterActivity" />
         <activity android:name=".UsersListActivity"/>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".MovieDetailsFragment"
+            android:theme="@style/AppThemeWithTitle"
+            android:label="Movie Details"/>
 
     </application>
 

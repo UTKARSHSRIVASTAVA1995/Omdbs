@@ -2,6 +2,7 @@ package com.example.omdbs;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
     @Override
     public void onBindViewHolder(MovieViewHolder holder, final int position) {
 
-        MovieSearchList.Search movie = moviesList.get(position);
+        final MovieSearchList.Search movie = moviesList.get(position);
         holder.title.setText(movie.getTitle());
         Glide.with(context)
                 .load(movie.getPoster())
@@ -52,6 +53,9 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
             public void onClick(View v) {
 
                 Intent intent = new Intent(context, MovieDetailsFragment.class);
+                intent.putExtra("test", movie);
+               /* Bundle bundle = new Bundle();
+                bundle.putSerializable("test", movie);*/
                 context.startActivity(intent);
             }
         });

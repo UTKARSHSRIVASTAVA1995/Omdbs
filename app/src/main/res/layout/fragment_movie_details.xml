@@ -9,8 +9,8 @@
     <ImageView
 
         android:id="@+id/movie_poster"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_alignLeft="@id/movie_title"
         android:layout_marginTop="10dp"
         android:gravity="start"
-        android:text="Time"
+        android:text="Year"
         android:textColor="#fff"
         android:textSize="20sp" />
 
@@ -58,7 +58,7 @@
         android:layout_below="@id/movie_time"
         android:layout_alignLeft="@id/movie_title"
         android:layout_marginTop="10dp"
-        android:text="Description"
+        android:text="Director"
         android:textColor="#fff"
         android:textSize="20sp" />
 
