@@ -3,14 +3,18 @@ package com.example.omdbs;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.omdbs.dashboard.DashboardActivity;
+import com.example.omdbs.fragments.MyAccountFragment;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -39,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
 
         initViews();
         initListeners();
@@ -124,12 +129,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
             user.setCompanyOrganization(textInputEditTextCompanyOrganization.getText().toString().trim());
             databaseHelper.addUser(user);
-            
+
             Bundle b1 = new Bundle();
             b1.putString("name", textInputEditTextName.getText().toString());
             b1.putString("email", textInputEditTextEmail.getText().toString());
             b1.putString("password", textInputEditTextPassword.getText().toString());
             b1.putString("company", textInputEditTextCompanyOrganization.getText().toString());
+            Log.d("begin","answer");
+            MyAccountFragment m4=new MyAccountFragment();
+            FragmentManager manager=getSupportFragmentManager();
+            FragmentTransaction t=manager.beginTransaction();
+            m4.setArguments(b1);
+            Log.d("done","answer");
+            t.add(R.id.frameaccount,m4);
+            t.commit();
 
 
             SharedPreferences.Editor editor = getSharedPreferences("datasaving", MODE_PRIVATE).edit();

@@ -2,6 +2,7 @@
 
 
 <LinearLayout
+    android:id="@+id/frameaccount"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -13,8 +14,7 @@
 
 <androidx.cardview.widget.CardView
 
-    android:id="@+id/list"
-
+    android:id="@+id/list1234"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp">
