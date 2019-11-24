@@ -31,6 +31,7 @@ public class MyAccountFragment extends Fragment {
         textCompany = v.findViewById(R.id.textViewCreditCard);
         textEmail = v.findViewById(R.id.textViewEmail);
         textPassword = v.findViewById(R.id.textViewPassword);
+
         Bundle b3 = getArguments();
         String name = b3.getString("name");
         String company = b3.getString("company");
@@ -41,6 +42,7 @@ public class MyAccountFragment extends Fragment {
         textCompany.setText(company);
         textEmail.setText(email);
         textPassword.setText(pwd);
+
         return v;
 
     }

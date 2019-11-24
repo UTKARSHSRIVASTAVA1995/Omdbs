@@ -141,7 +141,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             FragmentTransaction t=manager.beginTransaction();
             m4.setArguments(b1);
             Log.d("done","answer");
-            t.add(R.id.frameaccount,m4);
+            t.add(R.id.frame_1234,m4);
             t.commit();
 
 

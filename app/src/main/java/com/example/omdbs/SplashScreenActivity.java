@@ -8,6 +8,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.omdbs.dashboard.DashboardActivity;
+import com.example.omdbs.fragments.MyAccountFragment;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

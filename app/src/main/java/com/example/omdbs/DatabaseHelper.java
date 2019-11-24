@@ -91,6 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void updateUser(User user) {
+
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_USER_NAME, user.getName());

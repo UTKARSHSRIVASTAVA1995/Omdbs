@@ -12,8 +12,8 @@ import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 public interface ApiCall {
-      String BASE_URL = "http://www.omdbapi.com/?";
-      String API_KEY = "a4f7d196";
+    String BASE_URL = "http://www.omdbapi.com/?";
+    String API_KEY = "a4f7d196";
 
     @GET("/")
     Call<MovieSearchList> search(@Query("apikey") String apikey, @Query("t") String query, @Query("type") String type, @Query("page") int page);
@@ -24,9 +24,10 @@ public interface ApiCall {
     Call<MovieSearchList> searchMovie(@Query("apikey") String apikey, @Query("s") String query, @Query("page") String page);
 
     @GET("/")
-    Call<SingleMovieDetail> getMovie(@Query("apikey") String apikey,@Query("i") String omdbId);
+    Call<SingleMovieDetail> getMovie(@Query("apikey") String apikey, @Query("i") String omdbId);
 
     class Factory {
+
         public static ApiCall service;
 
         public static ApiCall getInstance() {
