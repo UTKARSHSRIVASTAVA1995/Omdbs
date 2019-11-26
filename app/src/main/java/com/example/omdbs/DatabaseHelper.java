@@ -90,27 +90,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void updateUser(User user) {
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_USER_NAME, user.getName());
-        values.put(COLUMN_USER_EMAIL, user.getEmail());
-        values.put(COLUMN_USER_PASSWORD, user.getPassword());
-        values.put(COLUMN_USER_CREDIT_CARD, user.getCompanyOrganization());
-        db.update(TABLE_USER, values, COLUMN_USER_ID + " = ?",
-                new String[]{String.valueOf(user.getId())});
-        db.close();
-    }
-
-    public void deleteUser(User user) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",
-                new String[]{String.valueOf(user.getId())});
-        db.close();
-    }
-
     public boolean checkUsers(String email) {
+
         String[] columns = {COLUMN_USER_ID};
         SQLiteDatabase db = this.getReadableDatabase();
         String selection = COLUMN_USER_EMAIL + " = ?";
@@ -147,15 +128,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    public boolean checkUser1(String creditCard) {
+    public boolean checkUser1(String password) {
 
         String[] columns = {COLUMN_USER_ID};
+
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selection = COLUMN_USER_CREDIT_CARD + " = ?";
 
-
-        String[] selectionArgs = {creditCard};
+        String[] selectionArgs = {password};
 
         Cursor cursor = db.query(TABLE_USER, columns, selection, selectionArgs, null, null, null);
         int cursorCount = cursor.getCount();

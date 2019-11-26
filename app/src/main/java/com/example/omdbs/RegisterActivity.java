@@ -130,19 +130,29 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setCompanyOrganization(textInputEditTextCompanyOrganization.getText().toString().trim());
             databaseHelper.addUser(user);
 
+
+            Intent i = new Intent(RegisterActivity.this, DashboardActivity.class);
+            i.putExtra("name", textInputEditTextName.getText().toString());
+            i.putExtra("email", textInputEditTextEmail.getText().toString());
+            i.putExtra("password", textInputEditTextPassword.getText().toString());
+            i.putExtra("company", textInputEditTextCompanyOrganization.getText().toString());
+            startActivity(i);
+
+
+           /* MyAccountFragment m4=new MyAccountFragment();
+            FragmentManager manager=getSupportFragmentManager();
+            FragmentTransaction t=manager.beginTransaction();
             Bundle b1 = new Bundle();
             b1.putString("name", textInputEditTextName.getText().toString());
             b1.putString("email", textInputEditTextEmail.getText().toString());
             b1.putString("password", textInputEditTextPassword.getText().toString());
             b1.putString("company", textInputEditTextCompanyOrganization.getText().toString());
             Log.d("begin","answer");
-            MyAccountFragment m4=new MyAccountFragment();
-            FragmentManager manager=getSupportFragmentManager();
-            FragmentTransaction t=manager.beginTransaction();
+
             m4.setArguments(b1);
             Log.d("done","answer");
             t.add(R.id.frame_1234,m4);
-            t.commit();
+            t.commit();*/
 
 
             SharedPreferences.Editor editor = getSharedPreferences("datasaving", MODE_PRIVATE).edit();
@@ -150,7 +160,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editor.apply();
 
             Toast.makeText(RegisterActivity.this, "Registration SuccessFull", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(RegisterActivity.this, DashboardActivity.class));
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
 
         } else {
 

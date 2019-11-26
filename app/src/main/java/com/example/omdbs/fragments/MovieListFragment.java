@@ -109,7 +109,7 @@ public class MovieListFragment extends Fragment {
 
         getMovieList(1, "game of thrones");
         getMovieList(2, "race");
-        getMovieList(3, "romantic");
+        getMovieList(3, "mission impossible");
         getMovieList(4, "housefull");
         getMovieList(5, "batman");
         getMovieList(6, "superman");
@@ -119,7 +119,7 @@ public class MovieListFragment extends Fragment {
         getMovieList(10, "fast and furious");
         getMovieList(11, "Harry Potter");
         getMovieList(12, "twilight");
-        getMovieList(13, "mission impossible");
+        getMovieList(13, "romantic");
         getMovieList(14, "Die Hard");
         getMovieList(15, "Saw");
         getMovieList(16, "Star Wars");

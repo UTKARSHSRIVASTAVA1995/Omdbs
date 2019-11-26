@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="16dp"
-                android:text="Romantic Movies"
+                android:text="Mission Impossible"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -243,7 +243,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="16dp"
-                android:text="Mission Impossible"
+                android:text="Romantic Movies"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 

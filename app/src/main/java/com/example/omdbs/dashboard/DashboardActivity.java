@@ -1,10 +1,8 @@
 package com.example.omdbs.dashboard;
 
 import android.content.DialogInterface;
-
 import android.os.Bundle;
 import android.widget.FrameLayout;
-
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,7 +58,6 @@ public class DashboardActivity extends AppCompatActivity {
                     case R.id.tab_account:
                         transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_fragment_containers, new MyAccountFragment());
-                        break;
 
                 }
 
@@ -68,6 +65,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
 
     public void onBackPressed() {
@@ -76,9 +74,9 @@ public class DashboardActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("Confirm");
-        builder.setMessage("Are you sure?");
+        builder.setMessage("Are you sure you want to Logout?");
 
-        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
 

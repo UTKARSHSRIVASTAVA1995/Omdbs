@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="367dp"
+            android:layout_width="400dp"
             android:layout_height="250dp"
             android:src="@drawable/loginlogo" />
 
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:text="Create an account? click here "
             android:textColor="#0F0F0F"
             android:textSize="16sp" />

@@ -8,12 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.omdbs.models.SingleMovieDetail;
 
-
-import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -35,15 +34,13 @@ public class MovieDetailsFragment extends AppCompatActivity {
         Intent intent = getIntent();
         movie = (MovieSearchList.Search) intent.getExtras().getSerializable("test");
         Log.d("testttt", movie.getTitle());
-        if(null!= movie.getImdbID()){
+        if (null != movie.getImdbID()) {
             getMovieDetails(movie.getImdbID());
         }
 
     }
 
-
-    public void initWidgets()
-    {
+    public void initWidgets() {
         poster = findViewById(R.id.movie_poster);
         title = findViewById(R.id.movie_title);
         release = findViewById(R.id.movie_releaseDate);
@@ -52,33 +49,37 @@ public class MovieDetailsFragment extends AppCompatActivity {
     }
 
 
-    private  void setMovieDetails(final SingleMovieDetail singleMovieDetail){
+    private void setMovieDetails(final SingleMovieDetail singleMovieDetail) {
 
 
-        if(null == singleMovieDetail){
+        if (null == singleMovieDetail) {
+
             Toast.makeText(MovieDetailsFragment.this, "Movie details not found", Toast.LENGTH_SHORT).show();
             finish();
         }
 
 
-        if(null == singleMovieDetail.getTitle() || TextUtils.isEmpty(singleMovieDetail.getTitle())){
+        if (null == singleMovieDetail.getTitle() || TextUtils.isEmpty(singleMovieDetail.getTitle())) {
 
             title.setText("Title -");
-        }else {
-            title.setText("Title - "+singleMovieDetail.getTitle());
+
+        } else {
+
+            title.setText("Title - " + singleMovieDetail.getTitle());
         }
 
 
-
-        if(null == singleMovieDetail.getReleased() || TextUtils.isEmpty(singleMovieDetail.getReleased())){
+        if (null == singleMovieDetail.getReleased() || TextUtils.isEmpty(singleMovieDetail.getReleased())) {
 
             release.setText("Release -");
-        }else {
-            release.setText("Release - "+singleMovieDetail.getReleased());
+
+        } else {
+
+            release.setText("Release - " + singleMovieDetail.getReleased());
         }
 
 
-        if(null != singleMovieDetail.getPoster() && !TextUtils.isEmpty(singleMovieDetail.getPoster())){
+        if (null != singleMovieDetail.getPoster() && !TextUtils.isEmpty(singleMovieDetail.getPoster())) {
 
             Glide.with(MovieDetailsFragment.this)
                     .load(singleMovieDetail.getPoster())
@@ -86,20 +87,21 @@ public class MovieDetailsFragment extends AppCompatActivity {
         }
 
 
-        if(null == singleMovieDetail.getYear() || TextUtils.isEmpty(singleMovieDetail.getYear())){
+        if (null == singleMovieDetail.getYear() || TextUtils.isEmpty(singleMovieDetail.getYear())) {
 
             time.setText("Year -");
-        }else {
-            time.setText("Year - "+singleMovieDetail.getYear());
+
+        } else {
+
+            time.setText("Year - " + singleMovieDetail.getYear());
         }
 
 
-
-        if(null == singleMovieDetail.getDirector() || TextUtils.isEmpty(singleMovieDetail.getDirector())){
+        if (null == singleMovieDetail.getDirector() || TextUtils.isEmpty(singleMovieDetail.getDirector())) {
 
             description.setText("Director -");
-        }else {
-            description.setText("Director - "+singleMovieDetail.getDirector());
+        } else {
+            description.setText("Director - " + singleMovieDetail.getDirector());
         }
 
 
@@ -123,7 +125,6 @@ public class MovieDetailsFragment extends AppCompatActivity {
                     SingleMovieDetail singleMovieDetail = response.body();
 
                     if (singleMovieDetail.getResponse().equals("True")) {
-
 
 
                         setMovieDetails(singleMovieDetail);

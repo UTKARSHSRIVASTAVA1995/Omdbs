@@ -7,9 +7,6 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.omdbs.dashboard.DashboardActivity;
-import com.example.omdbs.fragments.MyAccountFragment;
-
 public class SplashScreenActivity extends AppCompatActivity {
 
     private SharedPreferences prefs;
@@ -36,17 +33,21 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                     if (null != loggedIn && loggedIn.matches("userlogged")) {
 
-                        startActivity(new Intent(SplashScreenActivity.this, DashboardActivity.class));
+                        startActivity(new Intent(SplashScreenActivity.this, LoginActivity.class));
+                        finish();
+
+
                     } else {
+
                         startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
                         finish();
+
                     }
+
                 } catch (Exception ignored) {
                     ignored.printStackTrace();
                 }
             }
         }, 3000);
-
-
     }
 }

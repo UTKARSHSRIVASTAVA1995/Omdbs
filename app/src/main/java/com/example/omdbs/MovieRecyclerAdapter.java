@@ -53,8 +53,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
 
                 Intent intent = new Intent(context, MovieDetailsFragment.class);
                 intent.putExtra("test", movie);
-               /* Bundle bundle = new Bundle();
-                bundle.putSerializable("test", movie);*/
+
                 context.startActivity(intent);
             }
         });

@@ -26,15 +26,20 @@ public class MainActivity extends AppCompatActivity {
         prefs = getSharedPreferences("datasaving", MODE_PRIVATE);
         loggedIn = prefs.getString("loggedIn", "");
 
+
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
                 if (null != loggedIn && !TextUtils.isEmpty(loggedIn) && loggedIn.matches("userlogged")) {
+
                     startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+
                 } else {
+
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
                     finish();
                 }
             }

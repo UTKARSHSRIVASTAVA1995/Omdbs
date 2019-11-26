@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,8 +33,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
         initViews();
         initListeners();
         initObjects();
@@ -103,17 +102,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             editor.apply();
 
             Intent accountsIntent = new Intent(activity, DashboardActivity.class);
-            //accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
-            //emptyInputEditText();
             startActivity(accountsIntent);
+
         } else {
 
+            Toast.makeText(LoginActivity.this, "No user Found" , Toast.LENGTH_SHORT).show();
         }
     }
 }
-
-//  private void emptyInputEditText() {
-//     textInputEditTextEmail.setText(null);
-//   textInputEditTextPassword.setText(null);
-//}
-//}

@@ -117,8 +117,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:hint="Company Organization"
-            android:inputType="text"
-            android:maxLength="16" />
+            android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,7 +157,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:hint=" Verify Email"
+            android:hint="Verify Email"
             android:inputType="text"
             android:maxLines="1" />
 
