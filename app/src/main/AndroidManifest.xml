@@ -3,7 +3,7 @@
     package="com.example.omdbs">
 
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
 
@@ -12,8 +12,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_imdb_foreground"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,19 +23,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".dashboard.DashboardActivity"/>
+
+        <activity android:name=".dashboard.DashboardActivity" />
 
         <activity android:name=".MainActivity" />
-    <activity android:name=".RegisterActivity" />
-        <activity android:name=".UsersListActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".MovieDetailsFragment"
-            android:theme="@style/AppThemeWithTitle"
-            android:label="Movie Details"/>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".UsersListActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".MovieDetailsFragment"
+            android:label="Movie Details"
+            android:theme="@style/AppThemeWithTitle" />
 
     </application>
-
-
 
 
 </manifest>

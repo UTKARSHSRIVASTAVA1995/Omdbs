@@ -66,7 +66,6 @@ public class MyAccountFragment extends Fragment {
 
         return v;
 
-
     }
 
     @Override
