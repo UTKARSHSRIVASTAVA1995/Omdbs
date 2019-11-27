@@ -38,6 +38,7 @@ public interface ApiCall {
                 OkHttpClient client = new OkHttpClient.Builder()
                         .addInterceptor(interceptor).build();
 
+
                 Retrofit retrofit = new Retrofit.Builder()
                         .addConverterFactory(GsonConverterFactory.create())
                         .client(client)
