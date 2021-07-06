@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.adapters;
 
 
 import android.view.LayoutInflater;
@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.omdbs.R;
 import com.example.omdbs.fragments.MyAccountFragment;
+import com.example.omdbs.models.User;
 
 import java.util.ArrayList;
 

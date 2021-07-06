@@ -1,5 +1,6 @@
-package com.example.omdbs;
+package com.example.omdbs.models.networking;
 
+import com.example.omdbs.models.MovieSearchList;
 import com.example.omdbs.models.SingleMovieDetail;
 
 import okhttp3.OkHttpClient;

@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.activities;
 
 
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.omdbs.sqlite.DatabaseHelper;
+import com.example.omdbs.utilities.InputValidation;
+import com.example.omdbs.R;
 import com.example.omdbs.dashboard.DashboardActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;

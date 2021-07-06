@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.omdbs.R;
+import com.example.omdbs.models.networking.ApiCall;
+import com.example.omdbs.models.MovieSearchList;
 import com.example.omdbs.models.SingleMovieDetail;
 
 import retrofit2.Call;

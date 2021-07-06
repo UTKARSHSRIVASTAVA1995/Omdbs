@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.omdbs.R;
 import com.example.omdbs.dashboard.DashboardActivity;
 
 public class MainActivity extends AppCompatActivity {

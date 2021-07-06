@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.omdbs.ApiCall;
-import com.example.omdbs.MovieRecyclerAdapter;
-import com.example.omdbs.MovieSearchList;
+import com.example.omdbs.models.networking.ApiCall;
+import com.example.omdbs.view.adapters.MovieRecyclerAdapter;
+import com.example.omdbs.models.MovieSearchList;
 import com.example.omdbs.R;
 import com.example.omdbs.utilities.SpacesItemDecoration;
 

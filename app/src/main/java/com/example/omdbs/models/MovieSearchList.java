@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

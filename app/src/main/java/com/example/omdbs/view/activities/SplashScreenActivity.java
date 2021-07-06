@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.omdbs.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

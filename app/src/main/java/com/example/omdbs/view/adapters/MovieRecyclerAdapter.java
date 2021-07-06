@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.omdbs.R;
+import com.example.omdbs.fragments.MovieDetailsFragment;
+import com.example.omdbs.models.MovieSearchList;
 
 import java.util.List;
 

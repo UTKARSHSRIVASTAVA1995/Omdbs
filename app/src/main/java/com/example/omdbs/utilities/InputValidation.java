@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.utilities;
 
 import android.app.Activity;
 import android.content.Context;

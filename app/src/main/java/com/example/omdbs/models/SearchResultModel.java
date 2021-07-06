@@ -1,5 +1,6 @@
-package com.example.omdbs;
+package com.example.omdbs.models;
 
+import com.example.omdbs.models.Search;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

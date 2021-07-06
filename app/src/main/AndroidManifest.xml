@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".view.activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,12 +26,12 @@
 
         <activity android:name=".dashboard.DashboardActivity" />
 
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".UsersListActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".view.activities.MainActivity" />
+        <activity android:name=".view.activities.RegisterActivity" />
+        <activity android:name=".view.activities.UsersListActivity" />
+        <activity android:name=".view.activities.LoginActivity" />
         <activity
-            android:name=".MovieDetailsFragment"
+            android:name=".fragments.MovieDetailsFragment"
             android:label="Movie Details"
             android:theme="@style/AppThemeWithTitle" />
 

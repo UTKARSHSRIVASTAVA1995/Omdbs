@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.models;
 
 public class User {
 

@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.omdbs.AdapterAccount;
-import com.example.omdbs.DatabaseHelper;
+import com.example.omdbs.view.adapters.AdapterAccount;
+import com.example.omdbs.sqlite.DatabaseHelper;
 import com.example.omdbs.R;
-import com.example.omdbs.User;
+import com.example.omdbs.models.User;
 
 import java.util.ArrayList;
 

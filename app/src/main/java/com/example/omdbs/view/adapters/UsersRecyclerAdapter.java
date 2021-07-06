@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.omdbs.R;
+import com.example.omdbs.models.User;
 
 import java.util.List;
 

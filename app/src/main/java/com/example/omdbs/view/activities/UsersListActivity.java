@@ -1,4 +1,4 @@
-package com.example.omdbs;
+package com.example.omdbs.view.activities;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.omdbs.R;
+import com.example.omdbs.view.adapters.UsersRecyclerAdapter;
+import com.example.omdbs.models.User;
+import com.example.omdbs.sqlite.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;
